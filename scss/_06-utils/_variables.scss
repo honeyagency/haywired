@@ -1,8 +1,10 @@
 $link-color: #4aa4ff;
 
-$default-font: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+$default-font:  "canada-type-gibson", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
 
-$base-serif-font:$default-font;
+$second-sans-font:  "acumin-pro-extra-condensed", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+
+$base-serif-font: "vollkorn",serif;
 $base-sans-font:$default-font;
 $heading-font-family:$default-font;
 
@@ -27,7 +29,7 @@ $base-border-radius: 8px;
 $gr:1.610833;
 
 $grid:1;
-
+$max-wrap:		1280px;
 //
 // Media Queries & Breakpoints
 // 

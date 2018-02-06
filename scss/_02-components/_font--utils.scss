@@ -1,0 +1,125 @@
+.font--smaller {
+    font-size: .8em;
+}
+
+.font--small {
+    font-size: .9em;
+}
+
+.font--medium {
+    font-size: 1em;
+}
+
+.font--large {
+    font-size: 1.1em;
+
+    @include media($screen-sm) {
+        font-size: 1.25em;
+    }
+}
+
+.font--larger {
+    font-size: 1.4em;
+}
+
+.font--sans {
+    font-family: $base-sans-font;
+}
+
+.font--serif {
+    font-family: $base-serif-font;
+}
+
+.font--condense {
+    font-family: $second-sans-font;
+}
+
+.font--tiny {
+    font-size: .85em;
+    line-height: 1.3;
+
+    ul {
+        line-height: 1.3;
+
+        li {
+            line-height: 1.3;
+        }
+    }
+}
+
+.font--thin {
+    font-weight: 100 !important;
+}
+
+.font--semi-bold {
+    font-weight: 500 !important;
+}
+
+.font--standard {
+    font-weight: 400 !important;
+}
+
+.font--bold {
+    font-weight: 600 !important;
+}
+
+.font--italic {
+    font-style: italic;
+}
+
+.font--normal {
+    font-style: normal !important;
+}
+
+.text--center {
+    text-align: center !important;
+}
+
+.text--right {
+    text-align: right !important;
+}
+
+.text--left {
+    text-align: left !important;
+}
+
+.text--uppercase {
+    text-transform: uppercase !important;
+}
+
+.text--lowercase {
+    text-transform: lowercase !important;
+}
+
+.text--capitalize {
+    text-transform: capitalize !important;
+}
+
+.transform--no {
+    text-transform: none !important;
+}
+
+.decoration--no {
+    text-decoration: none !important;
+}
+
+.line--1 {
+    line-height: 1;
+}
+
+.letter--1 {
+    letter-spacing: 1px;
+}
+
+.letter--2 {
+    letter-spacing: 2px;
+}
+
+.letter--3 {
+    letter-spacing: 3px;
+}
+
+.font--content {
+    line-height: 2.15;
+    font-size: 1.1rem;
+}

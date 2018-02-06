@@ -1,0 +1,19 @@
+.color--gray-light {
+    color: map-get($gray, light);
+}
+
+.color--gray-medium {
+    color: map-get($gray, medium);
+}
+
+.color--gray {
+    color: map-get($gray, main);
+}
+
+.color--gray-dark {
+    color: map-get($gray, dark);
+}
+
+.color--white {
+    color: $white;
+}

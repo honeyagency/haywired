@@ -1,0 +1,16 @@
+<section class="section--home-header">
+	<div class="block--header-video">
+
+		<video width="100%" autobuffer autoplay="true" preload='auto' poster="{{home.video.poster|resize(800)}}">
+			<source type="video/webm" src="{{home.video.webm}}">
+			<source type="video/mp4" src="{{home.video.mp4}}">
+			<object type="video/ogg" data="{{home.video.ogg}}">
+			<param name="src" value="{{home.video.ogg}}">
+				<param name="autoplay" value="true">
+					<param name="autoStart" value="true">
+			</object>
+		</video>
+	</div>
+	<i class="icon-logo-round" data-grunticon-embed></i>
+	<div>{{home.video.content}}</div>
+</section>

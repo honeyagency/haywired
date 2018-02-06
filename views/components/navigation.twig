@@ -1,13 +1,14 @@
-<nav role="navigation">
-	<ul>
+<nav role="navigation" class="grid--md-two-fifths">
+	<ul class="dsk--flex flex--wrap justify--between text--center grid--one">
+		{# {{menu.get_items|print_r}} #}
 		{% for item in menu.get_items %}
-			<li class="nav-item {{item.classes | join(' ')}}">
-				<a class="nav-link" href="{{item.get_link}}">{{item.title}}</a>
+			<li class="nav-item line--1 grid--third {{item.classes | join(' ')}}">
+				<a class="nav-link color--gray" href="{{item.get_link}}"><div class="title font--condense text--uppercase font--larger">{{item.title}}</div><span class="description font--serif">{{item.description}}</span></a>
 				{% if item.get_children %}
 					<ul class="nav nav-drop">
 						{% for child in item.get_children %}
 							<li class="nav-drop-item">
-								<a class="nav-link" href="{{child.get_link}}">{{child.title}}</a>
+								<a class="nav-link color--gray" href="{{child.get_link}}">{{child.title}}</a>
 							</li>
 						{% endfor %}
 					</ul>

@@ -1,0 +1,19 @@
+.bg--gray-light {
+    background-color: map-get($gray, light);
+}
+
+.bg--gray-medium {
+    background-color: map-get($gray, medium);
+}
+
+.bg--gray {
+    background-color: map-get($gray, main);
+}
+
+.bg--gray-dark {
+    background-color: map-get($gray, dark);
+}
+
+.bg--white {
+    background-color: $white;
+}
