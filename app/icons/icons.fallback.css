@@ -1,3 +1,5 @@
+.icon-bg-map { background-image: url('app/icons/bg-map.png'); background-repeat: no-repeat; }
+
 .icon-logo { background-image: url('app/icons/logo.png'); background-repeat: no-repeat; }
 
 .icon-round-logo { background-image: url('app/icons/round-logo.png'); background-repeat: no-repeat; }
@@ -9,4 +11,12 @@
 .icon-scenario--person { background-image: url('app/icons/scenario--person.png'); background-repeat: no-repeat; }
 
 .icon-scenario--phone { background-image: url('app/icons/scenario--phone.png'); background-repeat: no-repeat; }
+
+.icon-social--facebook { background-image: url('app/icons/social--facebook.png'); background-repeat: no-repeat; }
+
+.icon-social--instagram { background-image: url('app/icons/social--instagram.png'); background-repeat: no-repeat; }
+
+.icon-social--search { background-image: url('app/icons/social--search.png'); background-repeat: no-repeat; }
+
+.icon-social--twitter { background-image: url('app/icons/social--twitter.png'); background-repeat: no-repeat; }
 

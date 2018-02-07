@@ -52,3 +52,24 @@ function prepareHomepageFields()
     return $home;
 
 }
+function prepareSocial()
+{
+
+    $social = array(
+        'facebook'  => get_field('field_5a7a36cb38c9e', 'options'),
+        'twitter'   => get_field('field_5a7a36db38ca0', 'options'),
+        'instagram' => get_field('field_5a7a36d538c9f', 'options'),
+    );
+    return $social;
+}
+
+function prepareSiteOptions()
+{
+    $header = array(
+        'resources' => get_field('field_5a7a39a3614fe', 'options'),
+    );
+    $options = array(
+        'header' => $header,
+    );
+    return $options;
+}

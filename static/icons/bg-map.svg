@@ -1,0 +1,95 @@
+<svg id="cce4a862-90f8-493f-957c-b5b027999f7d" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024.06 793.08">
+  <defs>
+    <clipPath id="6eeda90e-d3f9-45a4-baa4-326e7f368ccc" transform="translate(-85.12 61.48)">
+      <rect x="677.82" y="204.82" width="14.69" height="500.94" style="fill: none"/>
+    </clipPath>
+    <clipPath id="3a42cc7e-c1c2-43bf-b01a-20e58fb2f668" transform="translate(-85.12 61.48)">
+      <rect x="887.57" width="14.69" height="664.01" style="fill: none"/>
+    </clipPath>
+    <clipPath id="7c41aee7-1772-42d0-986d-75b54961bc47" transform="translate(-85.12 61.48)">
+      <rect x="801.66" y="657.7" width="256.17" height="14.69" style="fill: none"/>
+    </clipPath>
+    <clipPath id="cf2c4759-dafb-406f-96d8-49eeb9cce81a" transform="translate(-85.12 61.48)">
+      <path d="M925.34,603.76A26.59,26.59,0,0,1,904,614.48h-6.8v14.69H904a41.36,41.36,0,0,0,41.32-41.31V200.41h-14.7V587.86a26.47,26.47,0,0,1-5.28,15.9" style="fill: none"/>
+    </clipPath>
+    <clipPath id="68f495cb-f8eb-4ee1-b5a6-ae6153a8b169" transform="translate(-85.12 61.48)">
+      <path d="M685.57,705.76l-42.48-42.48a33.74,33.74,0,0,1,0-47.63l400.47-400.47-10.38-10.39L632.71,605.27a48.41,48.41,0,0,0,0,68.39l32.1,32.1" style="fill: none"/>
+    </clipPath>
+    <clipPath id="3ce6e3e2-1a9c-400b-82cf-fada5d962caa" transform="translate(-85.12 61.48)">
+      <polygon points="199.57 77.41 828.53 705.76 849.3 705.76 209.96 67.03 199.57 77.41" style="fill: none"/>
+    </clipPath>
+    <clipPath id="ed830487-03c7-47ee-b5b3-29570a1902ef" transform="translate(-85.12 61.48)">
+      <polygon points="654.02 675.06 664.41 685.45 1057.82 292.03 1057.82 271.26 654.02 675.06" style="fill: none"/>
+    </clipPath>
+    <clipPath id="a91154e6-fac2-4bf5-bfcc-132bfb3cbd37" transform="translate(-85.12 61.48)">
+      <rect x="364.12" y="109.52" width="15" height="596" style="fill: none"/>
+    </clipPath>
+    <clipPath id="0dc37063-63ef-463c-a7b3-695bcec50dae" transform="translate(-85.12 61.48)">
+      <polygon points="216.39 360.76 561.39 705.76 582.16 705.76 226.77 350.37 216.39 360.76" style="fill: none"/>
+    </clipPath>
+    <clipPath id="18701200-2323-4b69-a24d-71ff42efe113" transform="translate(-85.12 61.48)">
+      <rect x="577.9" y="92.06" width="14.69" height="613.7" style="fill: none"/>
+    </clipPath>
+    <clipPath id="0623d5c1-1b96-4e74-ac48-79344bbeeb97" transform="translate(-85.12 61.48)">
+      <rect x="92.34" y="591.53" width="558.69" height="14.69" style="fill: none"/>
+    </clipPath>
+    <clipPath id="1045fd86-6198-4763-87df-b2efbc99f230" transform="translate(-85.12 61.48)">
+      <rect x="934.61" y="512.04" width="123.22" height="14.69" style="fill: none"/>
+    </clipPath>
+    <clipPath id="bacefe3f-a6e9-48ee-9897-6c7caa286e9c" transform="translate(-85.12 61.48)">
+      <rect x="153.52" y="350.28" width="537.23" height="14.69" style="fill: none"/>
+    </clipPath>
+    <clipPath id="84dc7d52-493d-4b69-bbf5-cfd2909ca3f0" transform="translate(-85.12 61.48)">
+      <polygon points="204.77 431.26 479.26 705.76 500.02 705.76 215.15 420.88 204.77 431.26" style="fill: none"/>
+    </clipPath>
+    <clipPath id="21af339d-7f1b-4e82-9f7b-14b9064da181" transform="translate(-85.12 61.48)">
+      <rect x="1004.12" y="190.52" width="15" height="515" style="fill: none"/>
+    </clipPath>
+  </defs>
+  <title>bg-map</title>
+  <g style="clip-path: url(#6eeda90e-d3f9-45a4-baa4-326e7f368ccc)">
+    <path d="M685.12,705.52v-526" transform="translate(-85.12 61.48)" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#3a42cc7e-c1c2-43bf-b01a-20e58fb2f668)">
+    <line x1="810" y1="747" x2="810" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#7c41aee7-1772-42d0-986d-75b54961bc47)">
+    <line x1="704" y1="727" x2="996" y2="727" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#cf2c4759-dafb-406f-96d8-49eeb9cce81a)">
+    <path d="M896,622.48c21.12-1,42.12-5,42.12-37v-402" transform="translate(-85.12 61.48)" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#68f495cb-f8eb-4ee1-b5a6-ae6153a8b169)">
+    <path d="M693.12,723.52l-33-33c-54-54-36-65,14-116l369-370" transform="translate(-85.12 61.48)" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#3ce6e3e2-1a9c-400b-82cf-fada5d962caa)">
+    <line x1="763" y1="775" x2="120" y2="134" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#ed830487-03c7-47ee-b5b3-29570a1902ef)">
+    <line x1="569" y1="747" x2="1017" y2="301" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#a91154e6-fac2-4bf5-bfcc-132bfb3cbd37)">
+    <line x1="287" y1="782" x2="287" y2="148" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#0dc37063-63ef-463c-a7b3-695bcec50dae)">
+    <line x1="505" y1="786" x2="133" y2="415" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#18701200-2323-4b69-a24d-71ff42efe113)">
+    <line x1="497" y1="767" x2="500" y2="136" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#0623d5c1-1b96-4e74-ac48-79344bbeeb97)">
+    <line x1="569" y1="660" y2="660" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#1045fd86-6198-4763-87df-b2efbc99f230)">
+    <line x1="841" y1="581" x2="983" y2="581" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#bacefe3f-a6e9-48ee-9897-6c7caa286e9c)">
+    <line x1="646" y1="419" x2="46" y2="419" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#84dc7d52-493d-4b69-bbf5-cfd2909ca3f0)">
+    <line x1="420" y1="781" x2="113" y2="475" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+  <g style="clip-path: url(#21af339d-7f1b-4e82-9f7b-14b9064da181)">
+    <line x1="926" y1="777" x2="926" y2="213" style="fill: none;stroke: #e2e2e2;stroke-miterlimit: 10;stroke-width: 20px"/>
+  </g>
+</svg>

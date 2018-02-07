@@ -294,7 +294,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options"
+                "value": "acf-options-footer"
             }
         ]
     ],
@@ -306,5 +306,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1516926302
+    "modified": 1517958833
 }
