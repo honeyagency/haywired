@@ -1,0 +1,12 @@
+.button{
+	text-decoration: none !important;
+
+	&.underline{
+		text-transform: uppercase;
+		// color: $black;
+		font-weight: 600;
+		padding-bottom: 3px;
+		border-bottom: 6px solid $green;
+		letter-spacing: 1px;
+	}
+}

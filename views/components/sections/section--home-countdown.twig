@@ -1,3 +1,16 @@
-<section class="section--home-countdown">
-	
+<section class="section--home-countdown bg--gray-dark color--white flex flex--wrap">
+	<div class="block--countdown-clock grid--one grid--sm-half grid--md-two-fifths grid--lg-third nog flex flex--wrap text--center">
+		<div class="grid--fourth grid--sm-half nog count"><div class="data"><div class="color--green font--condense font--thin num">121</div><div class="type">Days</div></div></div>
+		<div class="grid--fourth grid--sm-half nog count"><div class="data"><div class="color--green font--condense font--thin num">01</div><div class="type">Hours</div></div></div>
+		<div class="grid--fourth grid--sm-half nog count"><div class="data"><div class="color--green font--condense font--thin num">32</div><div class="type">Minutes</div></div></div>
+		<div class="grid--fourth grid--sm-half nog count"><div class="data"><div class="color--green font--condense font--thin num">15</div><div class="type">Seconds</div></div></div>
+	</div>
+	<div class="block--countdown-content grid--one grid--sm-half grid--md-three-fifths grid--lg-two-thirds nog spacing--vert-2 spacing--dsk-v spacing--gutter">
+		<div class="grid--sm-one grid--lg-three-fifths margin--center vertical--center">
+			<strong class="letter--1 text--uppercase">{{home.countdown.title}}</strong><br>
+			<h2 class="text--uppercase font--condense margin--bot-half color--green">{{home.countdown.time}}</h2>
+			<div class="font--large font--serif"><p>{{home.countdown.content|striptags}}</p></div>
+			<a class="button underline color--white" href="{{home.countdown.cta.link}}" target="{{home.countdown.cta.target}}" title="{{home.countdown.cta.title}}">{{home.countdown.cta.title}}</a>
+		</div>
+	</div>
 </section>

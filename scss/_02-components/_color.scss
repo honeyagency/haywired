@@ -10,10 +10,14 @@
     color: map-get($gray, main);
 }
 
-.color--gray-dark {
+.color--gray-dark, .color--black {
     color: map-get($gray, dark);
 }
 
 .color--white {
     color: $white;
+}
+
+.color--green {
+    color: $green;
 }
