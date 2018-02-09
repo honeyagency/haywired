@@ -37,11 +37,17 @@ function prepareHomepageFields()
             );
         }
     }
+    $prepareImageId = get_field('field_5a7e0e6ab1ab5');
+    $prepareImage   = null;
+    if (!empty($prepareImageId)) {
+        $prepareImage = new TimberImage($prepareImageId);
+    }
     $prepare = array(
+        'image'     => $prepareImage,
         'title'     => get_field('field_5a6a731ee9cf0'),
         'content'   => get_field('field_5a6a7327e9cf1'),
         'scenarios' => $scenarios,
-        'link'      => get_field('field_5a6a7378e9cf5'),
+        'cta'       => get_field('field_5a6a7378e9cf5'),
     );
     $home = array(
         'video'     => $video,

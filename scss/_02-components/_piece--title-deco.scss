@@ -47,11 +47,17 @@
             -webkit-clip-path: polygon(70% 5%, 100% 0, 96% 85%, 35% 95%);
             clip-path: polygon(70% 5%, 100% 0, 96% 85%, 35% 95%);
             background-color: $green;
-            min-height: 74px;
             transform: translateY(-35%) translateX(9%);
             width: 105%;
             z-index: 1;
+            min-height: 40px;
+
+            @include media($screen-sm) {
+                min-height: 74px;
+            }
         }
+
+        
     }
 
     span {

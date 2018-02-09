@@ -1,11 +1,12 @@
 body {
     font-family: $base-sans-font;
     line-height: $base-line-height;
-font-size: 1rem;
-@include media($screen-xs){}
-@include media($screen-sm){
+    font-size: 1rem;
+
+    @include media($screen-sm) {
         font-size: 1.1rem;
-}
+    }
+
 
     color: $base-font-color;
     font-weight: 400;
@@ -46,7 +47,7 @@ h1 {
 }
 
 h2 {
-    font-size: $h2;
+    font-size: $h2 * 1.4;
     letter-spacing: 1.7px;
 
     &.font--condense {
