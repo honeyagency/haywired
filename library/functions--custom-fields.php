@@ -3,7 +3,7 @@
 function prepareHomepageFields()
 {
     $videoPosterId = get_field('field_5a6a7230e9ce4');
-    if ($videoId != null) {
+    if ($videoPosterId != null) {
         $videoPoster = new TimberImage($videoPosterId);
     } else {
         $videoPoster = null;
@@ -20,11 +20,20 @@ function prepareHomepageFields()
         'content' => get_field('field_5a6a725fe9ce7'),
         'cta'     => get_field('field_5a6a726ce9ce8'),
     );
+
+    $countdownTime      = get_field('field_5a6a729ce9ceb');
+    // $countdownTimestamp = strotime($countdownTime);
+    $formattedCountdown = DateTime::createFromFormat('M d, Y H:i:s', $countdownTime);
+
+    $interval = date_create('now')->diff($formattedCountdown);
+
     $countdown = array(
-        'time'    => get_field('field_5a6a729ce9ceb'),
-        'title'   => get_field('field_5a6a72b1e9cec'),
-        'content' => get_field('field_5a6a72cae9ced'),
-        'cta'     => get_field('field_5a6a72e4e9cee'),
+        'time'      => $countdownTime,
+        'interval'  => $interval,
+
+        'title'     => get_field('field_5a6a72b1e9cec'),
+        'content'   => get_field('field_5a6a72cae9ced'),
+        'cta'       => get_field('field_5a6a72e4e9cee'),
     );
 
     if (have_rows('field_5a6a733ce9cf2')) {
