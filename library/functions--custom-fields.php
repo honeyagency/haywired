@@ -204,11 +204,20 @@ function prepareBeInformedPage()
             );
         }
     }
+    $bgImageId = get_field('field_5a8371607ccd0');
+    $bgImage   = null;
+    if (!empty($bgImageId)) {
+        $bgImage = new TimberImage($bgImageId);
+    }
+    $linksection = array(
+        'links' => $links,
+        'image' => $bgImage,
+    );
     $done = array(
         'title'   => get_field('field_5a8348f337efa'),
         'content' => get_field('field_5a8348ff37efb'),
         'stats'   => $stats,
-        'cta'    => get_field('field_5a83494c37eff'),
+        'cta'     => get_field('field_5a83494c37eff'),
     );
     $know = array(
         'title'   => get_field('field_5a83496c37f01'),
@@ -220,7 +229,7 @@ function prepareBeInformedPage()
         'intro' => $intro,
         'done'  => $done,
         'know'  => $know,
-        'links' => $links,
+        'links' => $linksection,
     );
     return $section;
 }

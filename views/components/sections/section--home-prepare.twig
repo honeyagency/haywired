@@ -1,4 +1,4 @@
-<section class="section--home-prepare text--center spacing--vert-4 spacing--dsk-vert-6" {% if home.prepare.image %}style="background-image:url('{{home.prepare.image}}');"{% endif %}>
+<section class="section--home-prepare text--center spacing--vert-4 spacing--dsk-vert-6" {% if home.prepare.image %}style="background-image:url('{{home.prepare.image|resize(1280)}}');"{% endif %}>
 	<div class="spacing--gutter max-wrap margin--center">
 		<h2 class="deco center text--uppercase font--condense"><span>{{home.prepare.title}}</span></h2>
 		<div class="font--serif color--white font--large textwrap margin--center ">{{home.prepare.content|striptags}}</div>

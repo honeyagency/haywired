@@ -17,6 +17,13 @@
 .bg--white {
     background-color: $white;
 }
+
 .bg--green {
     background-color: $green;
+}
+
+.bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
