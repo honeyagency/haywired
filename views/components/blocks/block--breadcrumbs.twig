@@ -1,0 +1,7 @@
+<div class="block--breadcrumbs spacing--horiz-1 spacing--vert-1">
+	{% if post.post_parent != 0 %}
+		<a href="{{ post.parent.link }}" class="font--condense text--uppercase color--gray">{{ post.parent.title }} <i class="icon-angle-right" data-grunticon-embed></i></a><span class="font--condense text--uppercase color--gray">{{post.title}}</span>
+	{% elseif post.post_type != 'page' %}
+		<a href="{{site.url}}/{{post.type.rewrite.slug}}" class="font--condense text--uppercase color--gray">{{post.type.labels.name}} <i class="icon-angle-right" data-grunticon-embed></i></a><span class="font--condense text--uppercase color--gray">{{post.title}}</span>
+	{% endif %}
+</div>

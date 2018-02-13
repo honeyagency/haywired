@@ -1,0 +1,22 @@
+.block--breadcrumbs {
+	transition: font-size 0.1s $base-animation;
+    .icon-angle-right {
+        display: inline-block;
+        height: 12px;
+        width: 6px;
+        margin: 0 4px;
+        transition: opacity 0.1s $base-animation;
+        opacity: 1;
+    }
+}
+
+.wf-loading {
+    .block--breadcrumbs {
+        font-size: .5em;
+transition: font-size 0.1s $base-animation;
+        i {
+            opacity: 0;
+            transition: opacity 0.1s $base-animation;
+        }
+    }
+}

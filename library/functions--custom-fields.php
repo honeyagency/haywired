@@ -163,17 +163,14 @@ function prepareFooter()
     return $footer;
 }
 
-function prepareHeader()
+function preparePageSettings()
 {
-    $imageId = get_field('field_5a832fcd68e4d');
-    if (empty($imageId)) {
-        $image = null;
-    } else {
-        $image = new TimberImage($imageId);
+    $title = get_field('field_5a834219fd9c5');
+    if (!empty($title)) {
+        $title = $title[0];
     }
-    $header = array(
-        'subtitle' => get_field('field_5a832fb968e4c'),
-        'image'    => $image,
+    $settings = array(
+        'parenttitle' => $title,
     );
-    return $header;
+    return $settings;
 }

@@ -1,13 +1,12 @@
 {% extends "base.twig" %}
-
 {% block content %}
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			{% block contentheader %}
-		{% include 'components/sections/section--header.twig' %}
-	{% endblock %}
-			<section class="article-content">
-					{{post.content}}
-
-			</section>
-		</article>
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		{% block contentheader %}
+			{% include 'components/sections/section--header.twig' %}
+		{% endblock %}
+		<section class="article-content">
+			{% if post.post_parent != 0 %}{% include 'components/blocks/block--breadcrumbs.twig' %}{% endif %}
+			{{post.content}}
+		</section>
+	</article>
 {% endblock %}
