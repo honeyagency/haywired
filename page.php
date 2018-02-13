@@ -27,6 +27,7 @@ $context['post'] = $post;
 
 if (is_front_page()) {
 	$context['home'] = prepareHomepageFields();
+	$context['twitter'] = getTwitter();
 }
 
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );

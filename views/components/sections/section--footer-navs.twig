@@ -1,0 +1,10 @@
+<section class="section--footer-navs flex flex--wrap justify--between spacing--vert-2">
+	{% for nav in footer.navs %}
+		<div class="block--footer-nav spacing--vert-half">
+		<strong class="text--uppercase block">{{nav.title}}</strong>
+		{% for link in nav.links %}
+			<a class="block color--gray font--serif" href="{{link.link}}" target="{{link.target}}" title="{{link.title}}">{{link.title}}</a>
+		{% endfor %}
+	</div>
+	{% endfor %}
+</section>

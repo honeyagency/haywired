@@ -129,7 +129,7 @@
             "key": "field_5a6a74111eae8",
             "label": "Signup",
             "name": "footer_informed_signup",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -140,9 +140,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_5a6a744d1eae9",
@@ -176,7 +176,7 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Add Nav Area",
             "sub_fields": [
                 {
@@ -287,6 +287,42 @@
                     "return_format": "array"
                 }
             ]
+        },
+        {
+            "key": "field_5a8325012738a",
+            "label": "Ultimate Row",
+            "name": "ultimate_row",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Link",
+            "sub_fields": [
+                {
+                    "key": "field_5a8325012738b",
+                    "label": "Link",
+                    "name": "ultimate_links",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
         }
     ],
     "location": [
@@ -306,5 +342,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1517958833
+    "modified": 1518544187
 }

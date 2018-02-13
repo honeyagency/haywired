@@ -1,0 +1,147 @@
+.menu--trigger {
+    @include media($max-sm) {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        display: block;
+        -webkit-tap-highlight-color: transparent !important;
+        z-index: 99999999;
+
+        span {
+            height: 1px;
+            width: 100%;
+            border-bottom: 1px solid;
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+            display: block;
+            opacity: 1;
+            transition: opacity 0.3s $base-animation;
+        }
+
+        &:after,
+        &:before {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            content: ' ';
+            transform-origin: center;
+            transform: translateY(0) rotate(0);
+            transition: transform 0.3s $base-animation;
+        }
+
+        &:before {
+            border-top: 1px solid;
+            top: 0;
+        }
+
+        &:after {
+            border-bottom: 1px solid;
+            bottom: 0;
+        }
+    }
+}
+
+nav {
+    @include media($max-sm) {
+        transition: transform 0.3s $base-animation;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999999;
+        font-size: 1.3em;
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: white;
+
+            li {
+                width: 100%;
+                display: block;
+                padding: 1em 0 2em 0;
+            }
+        }
+
+        transform: translateX(-100%);
+    }
+}
+
+body.navopen {
+    @include media($max-sm) {
+        nav {
+            transform: translateX(0);
+            transition: transform 0.3s $base-animation;
+        }
+    }
+
+
+    .menu--trigger {
+        background-color: transparent;
+
+        &:after, &:before {
+            transition: transform 0.3s $base-animation;
+        }
+
+        &:before {
+            transform: translateY(9.5px) rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(45deg);
+            transform: translateY(-9.5px) rotate(-45deg);
+        }
+
+        span {
+            transition: opacity 0.15s $base-animation;
+            opacity: 0;
+        }
+    }
+
+    nav {
+        transition: transform 0.4s $base-animation;
+        transform: translateY(0);
+
+        ul {
+            li {
+                &:nth-of-type(1) {
+                    transition: transform 0.75s $base-animation;
+                    z-index: 60;
+                }
+
+                &:nth-of-type(2) {
+                    transition: transform 0.7s $base-animation;
+                    z-index: 30;
+                }
+
+                &:nth-of-type(3) {
+                    transition: transform 0.6s $base-animation;
+                    z-index: 20;
+                }
+
+                &:nth-of-type(4) {
+                    transition: transform 0.5s $base-animation;
+                    z-index: 15;
+                }
+
+                &:nth-of-type(5) {
+                    transition: transform 0.4s $base-animation;
+                    z-index: 12;
+                }
+
+                &:nth-of-type(6) {
+                    transition: transform 0.3s $base-animation;
+                    z-index: 10;
+                }
+
+                transform: translateY(0);
+            }
+        }
+    }
+}

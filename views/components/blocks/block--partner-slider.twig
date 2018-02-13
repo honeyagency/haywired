@@ -1,0 +1,8 @@
+<div class="block--partner-slider spacing--gutter margin--center max-wrap">
+	<hr class="color--gray-medium mar--no">
+	<span class="font--condense text--uppercase color--gray-medium font--bold font--large letter--1">Partners</span>
+	<br>
+	{% for partner in home.partners.partners %}
+		<img width="190" src="{{partner}}" alt="">
+	{% endfor %}
+</div>

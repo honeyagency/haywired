@@ -1,3 +1,6 @@
+.font--smallest {
+    font-size: .7em;
+}
 .font--smaller {
     font-size: .8em;
 }
@@ -20,6 +23,11 @@
 
 .font--larger {
     font-size: 1.4em;
+}
+
+.font--huge {
+    font-size: 3em;
+    letter-spacing: 0;
 }
 
 .font--sans {

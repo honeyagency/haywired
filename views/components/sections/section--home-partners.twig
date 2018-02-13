@@ -1,0 +1,20 @@
+<section class="section--home-partners spacing--vert-4">
+	
+	<div class="spacing--gutter max-wrap margin--center flex flex--wrap justify--between">
+		<div class="block--partner grid--half bg--gray-light spacing--horiz-2 spacing--vert-3">
+			<span class="font--condense text--uppercase bg--green color--black inline--block font--bold font--large spacing--horiz-1">{{home.partners.title}}</span><br><br>
+			<h3 class="transform--no font--huge">{{home.partners.name}}</h3>
+			<strong class="text--uppercase letter--1">{{home.partners.since}}</strong>
+			<p>{{home.partners.content|striptags}}</p>
+			<a class="button underline color--black center" href="{{home.partners.cta.link}}" target="{{home.partners.cta.target}}" title="{{home.partners.cta.title}}">{{home.partners.cta.title}}</a>
+		</div>
+		<div class="block--news grid--half">
+			{% for tweet in twitter %}
+				{# {{tweet.text}} #}
+				tweet<br>
+			{% endfor %}
+		</div>
+	</div>
+
+	{% include 'components/blocks/block--partner-slider.twig' %}
+</section>

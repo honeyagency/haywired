@@ -21,19 +21,19 @@ function prepareHomepageFields()
         'cta'     => get_field('field_5a6a726ce9ce8'),
     );
 
-    $countdownTime      = get_field('field_5a6a729ce9ceb');
+    $countdownTime = get_field('field_5a6a729ce9ceb');
     // $countdownTimestamp = strotime($countdownTime);
     $formattedCountdown = DateTime::createFromFormat('M d, Y H:i:s', $countdownTime);
 
     $interval = date_create('now')->diff($formattedCountdown);
 
     $countdown = array(
-        'time'      => $countdownTime,
-        'interval'  => $interval,
+        'time'     => $countdownTime,
+        'interval' => $interval,
 
-        'title'     => get_field('field_5a6a72b1e9cec'),
-        'content'   => get_field('field_5a6a72cae9ced'),
-        'cta'       => get_field('field_5a6a72e4e9cee'),
+        'title'    => get_field('field_5a6a72b1e9cec'),
+        'content'  => get_field('field_5a6a72cae9ced'),
+        'cta'      => get_field('field_5a6a72e4e9cee'),
     );
 
     if (have_rows('field_5a6a733ce9cf2')) {
@@ -58,11 +58,29 @@ function prepareHomepageFields()
         'scenarios' => $scenarios,
         'cta'       => get_field('field_5a6a7378e9cf5'),
     );
+    $partnerImages = get_field('field_5a8217f9fb49d');
+
+    if (!empty($partnerImages)) {
+        foreach ($partnerImages as $image) {
+            $gallery[] = new TimberImage($image['id']);
+        }
+    } else {
+        $gallery = null;
+    }
+    $partners = array(
+        'title'    => get_field('field_5a821687fb498'),
+        'name'     => get_field('field_5a821697fb499'),
+        'since'    => get_field('field_5a8216a3fb49a'),
+        'content'  => get_field('field_5a8216b3fb49b'),
+        'cta'      => get_field('field_5a8217e7fb49c'),
+        'partners' => $gallery,
+    );
     $home = array(
         'video'     => $video,
         'what'      => $what,
         'countdown' => $countdown,
         'prepare'   => $prepare,
+        'partners'  => $partners,
     );
     return $home;
 
@@ -80,6 +98,7 @@ function prepareSocial()
 
 function prepareSiteOptions()
 {
+
     $header = array(
         'resources' => get_field('field_5a7a39a3614fe', 'options'),
     );
@@ -87,4 +106,59 @@ function prepareSiteOptions()
         'header' => $header,
     );
     return $options;
+}
+
+function prepareFooter()
+{
+    $involved = array(
+        'title' => get_field('field_5a6a73c41eae2', 'options'),
+        'text'  => get_field('field_5a6a73d11eae3', 'options'),
+        'link'  => get_field('field_5a6a73e21eae4', 'options'),
+    );
+    $informed = array(
+        'title'  => get_field('field_5a6a73fb1eae6', 'options'),
+        'text'   => get_field('field_5a6a74071eae7', 'options'),
+        'signup' => get_field('field_5a6a74111eae8', 'options'),
+    );
+
+    if (have_rows('field_5a6a745c1eaea', 'options')) {
+        $navs = array();
+        while (have_rows('field_5a6a745c1eaea', 'options')) {
+            the_row();
+            if (have_rows('field_5a6a74a01eaed', 'options')) {
+                $links = array();
+                while (have_rows('field_5a6a74a01eaed', 'options')) {
+                    the_row();
+                    $links[] = get_sub_field('field_5a6a74b01eaee', 'options');
+                }
+            }
+            $navs[] = array(
+                'title' => get_sub_field('field_5a6a74781eaec', 'options'),
+                'links' => $links,
+            );
+        }
+    }
+
+    if (have_rows('field_5a6a74e91eaf0', 'options')) {
+        $penultimatelinks = array();
+        while (have_rows('field_5a6a74e91eaf0', 'options')) {
+            the_row();
+            $penultimatelinks[] = get_sub_field('field_5a6a75161eaf1', 'options');
+        }
+    }
+    if (have_rows('field_5a8325012738a', 'options')) {
+        $ultimatelinks = array();
+        while (have_rows('field_5a8325012738a', 'options')) {
+            the_row();
+            $ultimatelinks[] = get_sub_field('field_5a8325012738b', 'options');
+        }
+    }
+    $footer = array(
+        'involved'    => $involved,
+        'informed'    => $informed,
+        'navs'        => $navs,
+        'penultimate' => $penultimatelinks,
+        'ultimate'    => $ultimatelinks,
+    );
+    return $footer;
 }

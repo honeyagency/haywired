@@ -1,0 +1,10 @@
+<section class="section--footer-links text--center">
+	{% for link in footer.penultimate %}
+		<a class="font--thin font--small color--gray" href="{{link.link}}" target="{{link.target}}" title="{{link.title}}">{{link.title}}</a>{% if loop.last %}{% else %}<span class="spacing--horiz-half color--gray font--small">|</span>{% endif %}
+	{% endfor %}
+	<br>
+	<span class="text--uppercase font--smallest letter--1 color--gray-border">&copy; {{"now"|date('Y')}} All Rights Reserved</span><span class="spacing--horiz-half color--gray-border font--smallest">|</span>
+	{% for link in footer.ultimate %}
+		<a class="text--uppercase font--smallest letter--1 color--gray-border" href="{{link.link}}" target="{{link.target}}" title="{{link.title}}">{{link.title}}</a>{% if loop.last %}{% else %}<span class="spacing--horiz-half color--gray-border font--smallest">|</span>{% endif %}
+	{% endfor %}
+</section>

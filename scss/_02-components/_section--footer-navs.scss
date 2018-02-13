@@ -1,0 +1,24 @@
+.section--footer-navs {
+    border-top: 1px solid map-get($gray, border);
+
+    .block--footer-nav {
+        @include media($max-lg) {
+            // medium large screen 1/3 (last item is 2/3 since they're odd #)
+            flex-basis: calc(100% / 3 - (.6666666em * #{$gutter}));
+            width: calc(100% / 3 - (.6666666em * #{$gutter}));
+
+            &:last-of-type {
+                &:nth-of-type(odd) {
+                    flex-basis: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+                    width: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+                }
+            }
+        }
+
+
+        @include media($max-md) {
+            flex-basis: calc(100% / 2 - (.5em * #{$gutter}));
+            width: calc(100% / 2 - (.5em * #{$gutter}));
+        }
+    }
+}

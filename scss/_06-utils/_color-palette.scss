@@ -8,7 +8,8 @@ $gray: (
 	main: 			#919191,
 	dark: 			#333333,
 	map: 			#e2e2e2,
-	border:			#5c5c5c,
+	border:			#666666,
+	formbutton:		#b1b1b1,
 );
 $black: map-get($gray, dark);
 $white: map-get($gray, light);

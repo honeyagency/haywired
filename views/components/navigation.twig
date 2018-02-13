@@ -2,7 +2,7 @@
 	<ul class="dsk--flex flex--wrap justify--between text--center grid--one">
 		{# {{menu.get_items|print_r}} #}
 		{% for item in menu.get_items %}
-			<li class="nav-item line--1 grid--third {{item.classes | join(' ')}}">
+			<li class="nav-item line--1 grid--sm-third {{item.classes | join(' ')}}">
 				<a class="nav-link color--gray" href="{{item.get_link}}"><div class="title font--condense text--uppercase font--larger">{{item.title}}</div><span class="description font--serif">{{item.description}}</span></a>
 				{% if item.get_children %}
 					<ul class="nav nav-drop">

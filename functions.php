@@ -42,6 +42,8 @@ class StarterSite extends TimberSite
         $context['assets']  = get_template_directory_uri() . '/app';
         $context['social']  = prepareSocial();
         $context['options'] = prepareSiteOptions();
+        $context['footer']  = prepareFooter();
+
         return $context;
     }
 
