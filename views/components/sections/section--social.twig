@@ -1,6 +1,6 @@
 <section class="section--social {% if extras == 'false' %}{% else %}grid--md-two-fifths text--right hidden--mob{% endif %}">
 	{% if extras == 'false' %}{% else %}
-	{% if options.header.resources.url %}<a class="color--gray font--condense text--uppercase font--larger" href="{{options.header.resources.url}}" target="{{options.header.resources.target}}" title="{{options.header.resources.title}}">{{options.header.resources.title}}</a>{% endif %}
+	{% if options.header.resources.url %}<a class="resources color--gray font--condense text--uppercase font--larger" href="{{options.header.resources.url}}" target="{{options.header.resources.target}}" title="{{options.header.resources.title}}">{{options.header.resources.title}}</a>{% endif %}
 		{% endif %}
 	{% if social.facebook.url %}<a href="{{social.facebook.url}}" target="{{social.facebook.target}}" title="Follow {{social.facebook.title}} on Facebook"><i class="icon-social--facebook" data-grunticon-embed></i></a>{% endif %}
 	{% if social.twitter.url %}<a href="{{social.twitter.url}}" target="{{social.twitter.target}}" title="Follow {{social.twitter.title}} on Twitter"><i class="icon-social--twitter" data-grunticon-embed></i></a>{% endif %}

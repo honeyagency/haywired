@@ -1,8 +1,12 @@
-.icon-logo {
-    width: 200px;
-    display: inline-block;
+.hdr-logo-link {
+	height: 50px;
+    .icon-logo {
+        width: 200px;
+        height: 50px;
+        display: inline-block;
 
-    svg {
-        width: 100%;
+        svg {
+            width: 100%;
+        }
     }
 }
