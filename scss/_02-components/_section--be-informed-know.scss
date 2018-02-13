@@ -1,0 +1,34 @@
+.section--be-informed-know {
+    .quote {
+    	font-size: 3em;
+    	@include media($screen-xs){}
+    	@include media($screen-sm){}
+    	@include media($screen-md){
+    		font-size: 4em;
+    	}
+    	@include media($screen-lg){
+    		font-size: 5em;
+    	}
+        
+        line-height: 1;
+        font-weight: 100;
+		position: relative;
+        
+        &:before {
+            content: '“';
+            display: inline;
+            position: absolute;
+            left: -10px;
+            @include media($screen-md){
+            	left: -20px;
+            }
+        }
+        &:after {
+            content: '”';
+         display: inline;
+         // position: absolute;
+            margin-left:5px;
+        }
+    }
+
+}
