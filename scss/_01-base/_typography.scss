@@ -202,4 +202,17 @@ p {
 hr {
     border: 0;
     border-bottom: 1px solid;
+
+    &.thick {
+        border-bottom: 7px solid;
+    }
+
+    &.fifty {
+        width: 50px;
+    }
+
+    &.left {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

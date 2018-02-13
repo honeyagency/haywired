@@ -174,3 +174,53 @@ function preparePageSettings()
     );
     return $settings;
 }
+function prepareBeInformedPage()
+{
+    $intro = array(
+        'title'   => get_field('field_5a8348af37ef6'),
+        'content' => get_field('field_5a8348bf37ef7'),
+        'cta'     => get_field('field_5a8348d037ef8'),
+    );
+
+    if (have_rows('field_5a83490a37efc')) {
+        $stats = array();
+        while (have_rows('field_5a83490a37efc')) {
+            the_row();
+            $stats[] = array(
+                'number' => get_sub_field('field_5a83491f37efd'),
+                'data'   => get_sub_field('field_5a83493437efe'),
+            );
+        }
+    }
+
+    if (have_rows('field_5a8349b837f06')) {
+        $links = array();
+        while (have_rows('field_5a8349b837f06')) {
+            the_row();
+            $links[] = array(
+                'title'       => get_sub_field('field_5a8349ed37f07'),
+                'description' => get_sub_field('field_5a8349ff37f08'),
+                'link'        => get_sub_field('field_5a834a1037f09'),
+            );
+        }
+    }
+    $done = array(
+        'title'   => get_field('field_5a8348f337efa'),
+        'content' => get_field('field_5a8348ff37efb'),
+        'stats'   => $stats,
+        'cta'    => get_field('field_5a83494c37eff'),
+    );
+    $know = array(
+        'title'   => get_field('field_5a83496c37f01'),
+        'content' => get_field('field_5a83497637f02'),
+        'quote'   => get_field('field_5a83498c37f03'),
+        'author'  => get_field('field_5a83499f37f04'),
+    );
+    $section = array(
+        'intro' => $intro,
+        'done'  => $done,
+        'know'  => $know,
+        'links' => $links,
+    );
+    return $section;
+}

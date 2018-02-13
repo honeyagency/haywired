@@ -1,0 +1,16 @@
+<section class="section--be-informed-done bg--gray-dark text--center spacing--vert-4">
+	<div class="spacing--gutter max-wrap margin--center">
+	<h2 class="font--condense text--uppercase color--green">{{informed.done.title}}</h2>
+	<hr class="color--green thick fifty  margin--vert-2">
+	<div class="grid--one grid--sm-three-fourths grid--md-three-fifths font--large font--serif color--white margin--center">{{informed.done.content}}</div>
+	<div class="block--stats grid--one grid--sm-four-fifths  margin--center flex flex--wrap justify--between spacing--vert-2">
+		{% for stat in informed.done.stats %}
+			<div class="block--informed-stat font--condense text--uppercase font--bold grid--one spacing--dsk-horiz-1 grid--sm-third">
+				<div class="number color--green ">{{stat.number}}</div>
+				<div class="data color--white">{{stat.data}}</div>
+			</div>
+		{% endfor %}
+	</div>
+	<a class="button underline color--white" href="{{informed.done.cta.link}}" target="{{informed.done.cta.target}}" title="{{informed.done.cta.title}}">{{informed.done.cta.title}}</a>
+	</div>
+</section>

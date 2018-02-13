@@ -21,13 +21,15 @@
  * @since    Timber 0.1
  */
 
-$context           = Timber::get_context();
-$post              = new TimberPost();
-$context['post']   = $post;
+$context             = Timber::get_context();
+$post                = new TimberPost();
+$context['post']     = $post;
 $context['settings'] = preparePageSettings();
 if (is_front_page()) {
     $context['home']    = prepareHomepageFields();
     $context['twitter'] = getTwitter();
+} elseif (is_page(13)) {
+    $context['informed'] = prepareBeInformedPage();
 }
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
