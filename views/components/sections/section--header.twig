@@ -1,0 +1,9 @@
+<section class="section--header spacing--vert-5 {% if post.thumbnail %}hasimg{% endif %}">
+	<h1 class="deco font--condense text--uppercase {% if post.post_parent != 0 %}sub{% endif %}">{% if post.post_parent != 0 %}<span data-title="{{post.title}}">{{ post.parent.title }}{% else %}<span>{{post.title}}{% endif %}</span></h1>
+	{% if post.thumbnail %}
+		<div class="block--header-image">
+			<img src="{{post.thumbnail|resize(400,220)}}" data-original="{{post.thumbnail|resize(1080,594)}}" alt="{{post.thumbnail.caption}}" data-original-set="{{post.thumbnail|resize(640, 352)}}  640w,{{post.thumbnail|resize(750, 412)}}  750w,{{post.thumbnail|resize(1080,594)}} 1080w" sizes="100vw">
+		</div>
+	{% endif %}
+</section>
+

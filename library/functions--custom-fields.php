@@ -162,3 +162,18 @@ function prepareFooter()
     );
     return $footer;
 }
+
+function prepareHeader()
+{
+    $imageId = get_field('field_5a832fcd68e4d');
+    if (empty($imageId)) {
+        $image = null;
+    } else {
+        $image = new TimberImage($imageId);
+    }
+    $header = array(
+        'subtitle' => get_field('field_5a832fb968e4c'),
+        'image'    => $image,
+    );
+    return $header;
+}

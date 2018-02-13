@@ -56,8 +56,6 @@
                 min-height: 74px;
             }
         }
-
-        
     }
 
     span {
@@ -65,5 +63,33 @@
         position: relative;
         z-index: 2;
         padding-right: 10px;
+    }
+}
+
+.section--header {
+    h1.deco {
+        font-size: 3em;
+
+        @include media($screen-sm) {
+            font-size: 4em;
+        }
+
+
+        margin: 0 auto;
+
+        &:before {
+            min-height: 74px;
+
+            @include media($screen-sm) {
+                min-height: 95px;
+            }
+
+
+            clip-path: polygon(2% 20%, 100% 10%, 95% 95%, 0% 100%);
+        }
+
+        span {
+            padding-left: 10px;
+        }
     }
 }
