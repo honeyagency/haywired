@@ -1,0 +1,15 @@
+.block--keep-me-informed {
+    form {
+        .fields {
+            display: flex;
+
+            input {
+                flex-grow: 2;
+            }
+
+            [type="submit"] {
+                flex-grow: 1;
+            }
+        }
+    }
+}
