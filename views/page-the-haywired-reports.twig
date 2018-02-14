@@ -5,21 +5,9 @@
 			{% include 'components/sections/section--header.twig' %}
 		{% endblock %}
 		
-		
-		<section class="section--be-informed-intro relative">
-			{% if post.post_parent != 0 %}{% include 'components/blocks/block--breadcrumbs.twig' %}{% endif %}
-			<i class="icon-bg-map topright fade" data-grunticon-embed></i>
-			<div class="max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-6 relative ztop flex flex--wrap justify--between">
-				<div class="grid--one grid--sm-three-fifths">
-					{% for post in news %}
-						{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-					{% endfor %}
-				</div>
-				<div class="grid--one grid--sm-one grid--md-third">
-					{% include 'components/blocks/block--keep-me-informed.twig' %}
-				</div>
-			</div>
-		</section>
+		{% include 'components/sections/section--reports-intro.twig' %}
+		{% include 'components/sections/section--reports-volumes.twig' %}
+		{% include 'components/sections/section--reports-media.twig' %}
 		
 	</article>
 {% endblock %}

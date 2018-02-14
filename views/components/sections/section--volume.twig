@@ -1,0 +1,19 @@
+<section class="section--volume spacing--vert-2 spacing--dsk-vert-4">
+	<div class="flex flex--wrap justify--between margin--center max-wrap spacing--gutter">
+		<div class="grid--one grid--md-half grid--lg-two-fifths">
+		<h2 class="font--condense text--uppercase font--volume">{{volume.title}}</h2>
+		<h2 class="font--condense text--uppercase">{{volume.subtitle}}</h2>
+		<hr class="color--green thick fifty left margin--vert-2">
+		<div class="font--large font--serif">{{volume.content}}</div>
+	</div>
+	<div class="block--takeaways gird--one grid--md-half bg--gray-light spacing--horiz-2">
+		{% for takeaway in volume.takeaways %}
+			<div class="dsk--flex flex--wrap justify--between">
+				<div class="icon grid--one grid--sm-third"><i class="icon-{{takeaway.icon}}" data-grunticon-embed></i></div>
+				<div class="content grid--one grid--sm-two-thirds">{{takeaway.content}}</div>
+			</div>
+		{% endfor %}
+	</div>
+	</div>
+	
+</section>

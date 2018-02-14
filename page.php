@@ -36,6 +36,8 @@ if (is_front_page()) {
     $context['news'] = getCustomPosts('news', -1, null, 'date', null, null);
 } elseif (is_page(164)) {
     $context['events'] = getCustomPosts('events', -1, null, 'date', null, null);
+} elseif (is_page(134)) {
+    $context['reports'] = prepareReportsPageFields();
 }
 if ($post->post_parent == '16') {
     $context['resiliency'] = prepareResiliencyFields();

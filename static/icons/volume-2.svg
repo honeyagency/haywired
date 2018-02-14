@@ -1,0 +1,17 @@
+<svg id="eea0cafc-0a6b-4b40-aac5-e303981e02a3" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.7 86.7">
+  <title>volume-2</title>
+  <circle cx="43.35" cy="43.35" r="43.35" style="fill: #d9e842"/>
+  <g>
+    <path d="M29.64,75.5a.67.67,0,0,1-.66-.67V29.64a.66.66,0,0,1,.51-.64l36.19-8.78a.65.65,0,0,1,.57.13.64.64,0,0,1,.25.52V65.4A.65.65,0,0,1,66,66L29.81,75.47A.51.51,0,0,1,29.64,75.5Zm.67-45.34V74l34.86-9.08V21.71Z" style="fill: #333"/>
+    <path d="M29.65,30.3a9.46,9.46,0,0,1-9.45-9.45h1.33A8.13,8.13,0,0,0,29.65,29Z" style="fill: #333"/>
+    <path d="M29.65,75.5a9.46,9.46,0,0,1-9.45-9.45V20.65a.66.66,0,0,1,.51-.65l36.2-8.77a.63.63,0,0,1,.56.12.68.68,0,0,1,.26.52V13H56.4v-.28L21.53,21.17V66.05a8.13,8.13,0,0,0,8.12,8.12Z" style="fill: #333"/>
+    <rect x="59.95" y="10.36" width="1.33" height="12.38" transform="translate(6.05 47.71) rotate(-45)" style="fill: #333"/>
+    <text transform="matrix(1.09, -0.26, -0.1, 0.99, 33.8, 45.98)" style="font-size: 10.303139686584473px;fill: #333;font-family: AcuminProExtraCond-Bold, Acumin Pro ExtraCondensed;font-weight: 700;letter-spacing: 0.023992261470387105em">V<tspan x="4.04" y="0" style="letter-spacing: 0.01992290263442039em">O</tspan><tspan x="8.23" y="0" style="letter-spacing: 0.016023100416618953em">L</tspan><tspan x="11.63" y="0" style="letter-spacing: 0.020007680943503026em">UME</tspan><tspan style="font-size: 15.277979850769043px;letter-spacing: 0.020010431306428024em"><tspan x="5.3" y="19.88" xml:space="preserve">  </tspan><tspan x="9.92" y="19.88" style="font-size: 23.857309341430664px;letter-spacing: 0.020027198514235935em">II</tspan></tspan></text>
+    <g>
+      <polygon points="24.95 28.36 24.83 27.88 62.54 18.74 62.66 19.22 24.95 28.36" style="fill: #333"/>
+      <polygon points="23.37 26.78 23.26 26.29 60.96 17.15 61.08 17.64 23.37 26.78" style="fill: #333"/>
+      <polygon points="22.37 25.05 22.25 24.57 59.96 15.42 60.08 15.91 22.37 25.05" style="fill: #333"/>
+      <polygon points="20.56 23.58 20.44 23.09 58.15 13.95 58.26 14.44 20.56 23.58" style="fill: #333"/>
+    </g>
+  </g>
+</svg>

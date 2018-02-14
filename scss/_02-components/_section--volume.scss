@@ -1,0 +1,19 @@
+.section--volume{
+	.block--takeaways{
+		i{
+			width: 135px;
+			height: 89px;
+			display: inline-block;
+			svg{
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.content{
+			text-transform: uppercase;
+			font-weight: 900;
+			line-height: 1.2;
+
+		}
+	}
+}

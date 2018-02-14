@@ -4,9 +4,14 @@
 		{% block contentheader %}
 			{% include 'components/sections/section--header.twig' %}
 		{% endblock %}
-		<section class="article-content">
+		
+		<section class="bg--gray-light relative">
 			{% if post.post_parent != 0 %}{% include 'components/blocks/block--breadcrumbs.twig' %}{% endif %}
-			{{post.content}}
+			<div class="max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-6">
+
+				<div class="grid--one grid--sm-three-fourths grid--md-three-fifths font--large font--serif">{{post.content}}</div>
+				
+			</div>
 		</section>
 	</article>
 {% endblock %}

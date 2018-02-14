@@ -283,3 +283,55 @@ function prepareEventFields()
     );
     return $event;
 }
+function prepareReportsPageFields()
+{
+    $intro = array(
+        'title'   => get_field('field_5a847bdab2b3e'),
+        'content' => get_field('field_5a847be2b2b3f'),
+    );
+    if (have_rows('field_5a847c0db2b41')) {
+        $volumes = array();
+        while (have_rows('field_5a847c0db2b41')) {
+            the_row();
+
+            if (have_rows('field_5a847c6b4c312')) {
+                $takeaways = array();
+                while (have_rows('field_5a847c6b4c312')) {
+                    the_row();
+                    $takeaways[] = array(
+                        'icon'    => get_sub_field('field_5a847c754c313'),
+                        'content' => get_sub_field('field_5a847c914c314'),
+                    );
+                }
+            }
+            $releaseDate          = get_sub_field('field_5a847cab2722a');
+            $formattedReleaseDate = DateTime::createFromFormat('M d, Y H:i:s', $releaseDate);
+            $interval             = date_create('now')->diff($formattedReleaseDate);
+
+            $volumes[]            = array(
+                'title'        => get_sub_field('field_5a847c22b2b42'),
+                'subtitle'     => get_sub_field('field_5a847c2db2b43'),
+                'interval'     => $interval,
+                'release_date' => $formattedReleaseDate,
+                'content'      => get_sub_field('field_5a847c37b2b44'),
+                'takeaways'    => $takeaways,
+                'cta'          => get_sub_field('field_5a847c50b2b45'),
+            );
+        }
+
+    } 
+
+    $media = array(
+        'title'   => get_field('field_5a847ccf5d6ac'),
+        'content' => get_field('field_5a847cdb5d6ad'),
+        'cta'     => get_field('field_5a847ceb5d6ae'),
+    );
+
+    $section = array(
+        'intro'   => $intro,
+        'volumes' => $volumes,
+        'media'   => $media,
+    );
+    return $section;
+
+}

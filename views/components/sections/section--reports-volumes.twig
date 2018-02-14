@@ -1,0 +1,6 @@
+
+{% for volume in reports.volumes %}
+	{% if volume.interval.invert == 1 %}
+		{% include 'components/sections/section--volume.twig' %}
+	{% endif %}
+{% endfor %}
