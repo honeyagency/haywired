@@ -1,0 +1,14 @@
+<section class="section--resiliency-example spacing--gutter spacing--vert-2 spacing--dsk-vert-6 bg" {% if resiliency.example.bg %}style="background-image:url('{{resiliency.example.bg|resize(1280)}}');"{% endif %}>
+<div class="spacing--gutter-dsk max-wrap margin--center flex flex--wrap justify--between">
+	<div class="block--image order--2 grid--one grid--md-half nog bg" {% if resiliency.example.image %}style="background-image:url('{{resiliency.example.image|resize(1280)}}');"{% endif %}>
+
+	</div>
+	<div class="block--partner order--1 grid--one grid--md-half nog bg--gray-light spacing--horiz-2 spacing--vert-3">
+		<span class="font--condense text--uppercase bg--green color--black inline--block font--bold font--large spacing--horiz-1">{{resiliency.example.title}}</span><br><br>
+		<h3 class="transform--no font--huge">{{resiliency.example.name}}</h3>
+		<strong class="text--uppercase letter--1">{{resiliency.example.since}}</strong>
+		<p>{{resiliency.example.content|striptags}}</p>
+		<a class="button underline color--black center" href="{{resiliency.example.cta.link}}" target="{{resiliency.example.cta.target}}" title="{{resiliency.example.cta.title}}">{{resiliency.example.cta.title}}</a>
+	</div>
+</div>
+</section>

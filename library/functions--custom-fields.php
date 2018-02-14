@@ -233,3 +233,41 @@ function prepareBeInformedPage()
     );
     return $section;
 }
+function prepareResiliencyFields()
+{
+    $intro = array(
+        'title'   => get_field('field_5a83784e3960d'),
+        'content' => get_field('field_5a8378563960e'),
+    );
+    $challenge = array(
+        'title'   => get_field('field_5a83787339610'),
+        'content' => get_field('field_5a83794a39611'),
+        'coming'  => get_field('field_5a83829d2eaaa'),
+    );
+    $exampleImageId = get_field('field_5a8379d407e2d');
+    $exampleImage   = null;
+    if (!empty($exampleImageId)) {
+        $exampleImage = new TimberImage($exampleImageId);
+    }
+    $resilBgImageId = get_field('field_5a837be1aa799');
+    $resilBgImage   = null;
+    if (!empty($resilBgImageId)) {
+        $resilBgImage = new TimberImage($resilBgImageId);
+    }
+    $example = array(
+        'title'   => get_field('field_5a8379a407e29'),
+        'name'    => get_field('field_5a8379ac07e2a'),
+        'since'   => get_field('field_5a8379b407e2b'),
+        'content' => get_field('field_5a8379be07e2c'),
+        'cta'     => get_field('field_5a8384e2043e5'),
+        'image'   => $exampleImage,
+        'bg'      => $resilBgImage,
+    );
+    $section = array(
+        'intro'     => $intro,
+        'challenge' => $challenge,
+        'example'   => $example,
+    );
+
+    return $section;
+}

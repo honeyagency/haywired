@@ -25,11 +25,19 @@ $context             = Timber::get_context();
 $post                = new TimberPost();
 $context['post']     = $post;
 $context['settings'] = preparePageSettings();
+
+
 if (is_front_page()) {
     $context['home']    = prepareHomepageFields();
     $context['twitter'] = getTwitter();
 } elseif (is_page(13)) {
     $context['informed'] = prepareBeInformedPage();
 }
-
+if ( $post->post_parent == '16' ) {
+	$context['resiliency'] = prepareResiliencyFields();
+	Timber::render(array('page-resiliency.twig'), $context);
+}else{
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
+}
+
+

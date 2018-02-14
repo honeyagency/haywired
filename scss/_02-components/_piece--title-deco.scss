@@ -19,6 +19,7 @@
 
         @include media($screen-sm) {
             min-height: 74px;
+            height: 150%;
         }
 
 
@@ -78,6 +79,7 @@
         margin: 0 auto;
 
         &:before {
+            height: auto;
             min-height: 74px;
 
             @include media($screen-sm) {

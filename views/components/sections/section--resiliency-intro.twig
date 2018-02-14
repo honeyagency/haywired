@@ -1,0 +1,8 @@
+<section class="bg--gray-dark">
+	{% if post.post_parent != 0 %}{% include 'components/blocks/block--breadcrumbs.twig' %}{% endif %}
+	<div class="text--center spacing--gutter spacing--vert-4">
+		<h2 class="font--condense text--uppercase color--green">{{resiliency.intro.title}}</h2>
+		<hr class="color--green thick fifty margin--vert-2">
+		<div class="grid--one grid--sm-three-fourths grid--md-three-fifths color--white margin--center font--large font--serif">{{resiliency.intro.content}}</div>
+	</div>
+</section>

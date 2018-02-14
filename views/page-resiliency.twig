@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+{% block content %}
+	<article class="post-type-{{post.post_type}} bg" id="post-{{post.ID}}">
+		{% block contentheader %}
+			{% include 'components/sections/section--header.twig' %}
+		{% endblock %}
+		
+		
+		{% include 'components/sections/section--resiliency-intro.twig' %}
+		{% include 'components/sections/section--resiliency-challenge.twig' %}
+		{% include 'components/sections/section--resiliency-example.twig' %}
+	</article>
+{% endblock %}

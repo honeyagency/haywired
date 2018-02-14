@@ -49,4 +49,41 @@
             margin-left: 38px;
         }
     }
+
+    &.botleft {
+        display: block;
+        position: absolute;
+        left: 0;
+        transform: rotateY(180deg);
+        bottom: -5em;
+
+        // top: 1px;
+        width: 100%;
+        overflow: hidden;
+        opacity: 0.7;
+
+        @include media($screen-sm) {
+            bottom: -12em;
+            opacity: 1;
+            width: 760px;
+        }
+
+
+        svg {
+            height: 100%;
+            width: 100%;
+            transform: none;
+            margin-bottom: -26px;
+
+            @include media($screen-sm) {
+                margin-left: 38px;
+            }
+        }
+    }
+}
+
+.icon-challenge {
+    width: 60px;
+    float: right;
+    display: inline-block;
 }
