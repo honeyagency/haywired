@@ -10,4 +10,15 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         $('body').toggleClass('navopen');
     });
+         if ($('.partner-slider').length > 0) {
+            $('.partner-slider').flickity({
+                // options
+
+                bgLazyLoad: 5,
+                cellAlign: 'left',
+                // contain: true,
+                prevNextButtons: true,
+                pageDots: false
+            });
+        }
 });

@@ -27,9 +27,14 @@ $context['post']     = $post;
 $context['settings'] = preparePageSettings();
 
 if (is_front_page()) {
-    $context['home']    = prepareHomepageFields();
+    $home               = prepareHomepageFields();
+    $context['home']    = $home;
     $context['twitter'] = getTwitter();
     $context['news']    = getCustomPosts('news', 1, null, 'date', null, null);
+    $size               = sizeof($home['partners']['partners']);
+    if ($size > 5) {
+        add_action('wp_enqueue_scripts', 'slider_scripts');
+    }
 } elseif (is_page(13)) {
     $context['informed'] = prepareBeInformedPage();
 } elseif (is_page(162)) {

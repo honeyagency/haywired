@@ -1,0 +1,15 @@
+.flickity-prev-next-button {
+    background: transparent !important;
+}
+
+.flickity-prev-next-button .arrow {
+    fill: $green !important;
+}
+
+.flickity-prev-next-button.previous {
+    left: -20px !important;
+}
+
+.flickity-prev-next-button.next {
+    right: -20px !important;
+}

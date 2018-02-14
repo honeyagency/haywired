@@ -50,6 +50,19 @@ function localInstall()
     return ($res);
 }
 
+function slider_scripts()
+{
+    // wp_register_script('selectric', get_template_directory_uri() . '/app/vendors/selectric.js', null, false, true);
+    // wp_enqueue_script('selectric');
+
+    // wp_enqueue_style('slick_style', get_template_directory_uri() . '/app/vendors/slick/slick.min.css', null, null, null);
+
+    wp_register_script('flickity', get_template_directory_uri() . '/app/vendors/flickity/flickity.min.js', null, false, true);
+    wp_enqueue_script('flickity');
+
+    wp_enqueue_style('flickity_style', get_template_directory_uri() . '/app/vendors/flickity/flickity.css', null, null, null);
+}
+
 // Enqueuing all of our scripts and styles
 function buscemi_scripts()
 {

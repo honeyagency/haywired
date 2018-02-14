@@ -2,7 +2,10 @@
 	<hr class="color--gray-medium mar--no">
 	<span class="font--condense text--uppercase color--gray-medium font--bold font--large letter--1">Sponsors</span>
 	<br>
-	{% for partner in home.partners.partners %}
-		<img width="190" src="{{partner}}" alt="">
-	{% endfor %}
+	<div class="{% if home.partners.partners|length > 5 %} partner-slider spacing--gutter{% else %}flex flex--wrap justify--between{% endif %}">
+		{% for partner in home.partners.partners %}
+			<div class="partner" style="background-image:url('{{partner|resize(380)}}')">
+			</div>
+		{% endfor %}
+	</div>
 </div>
