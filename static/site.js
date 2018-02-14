@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
             $('.partner-slider').flickity({
                 // options
 
-                bgLazyLoad: 5,
+
                 cellAlign: 'left',
                 // contain: true,
                 prevNextButtons: true,
