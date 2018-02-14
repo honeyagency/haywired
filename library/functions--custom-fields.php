@@ -73,6 +73,7 @@ function prepareHomepageFields()
         'since'    => get_field('field_5a8216a3fb49a'),
         'content'  => get_field('field_5a8216b3fb49b'),
         'cta'      => get_field('field_5a8217e7fb49c'),
+        'newscta'  => get_field('field_5a8462ceb0663'),
         'partners' => $gallery,
     );
     $home = array(

@@ -26,18 +26,18 @@ $post                = new TimberPost();
 $context['post']     = $post;
 $context['settings'] = preparePageSettings();
 
-
 if (is_front_page()) {
     $context['home']    = prepareHomepageFields();
     $context['twitter'] = getTwitter();
+    $context['news']    = getCustomPosts('news', 1, null, 'date', null, null);
 } elseif (is_page(13)) {
     $context['informed'] = prepareBeInformedPage();
+}elseif (is_page( 162 )) {
+	$context['news']    = getCustomPosts('news', -1, null, 'date', null, null);
 }
-if ( $post->post_parent == '16' ) {
-	$context['resiliency'] = prepareResiliencyFields();
-	Timber::render(array('page-resiliency.twig'), $context);
-}else{
-Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
+if ($post->post_parent == '16') {
+    $context['resiliency'] = prepareResiliencyFields();
+    Timber::render(array('page-resiliency.twig'), $context);
+} else {
+    Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
 }
-
-

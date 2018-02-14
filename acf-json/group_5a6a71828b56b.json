@@ -519,8 +519,23 @@
         },
         {
             "key": "field_5a8217e7fb49c",
-            "label": "Learn More",
-            "name": "learn_more",
+            "label": "Learn More (Parnter)",
+            "name": "learn_more_parnter",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5a8462ceb0663",
+            "label": "News Link",
+            "name": "news_link",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -575,5 +590,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1518475765
+    "modified": 1518625515
 }

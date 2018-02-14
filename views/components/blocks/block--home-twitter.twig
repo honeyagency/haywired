@@ -1,0 +1,16 @@
+<div class="block--home-twitter grid--one grid--md-third">
+	{% for tweet in twitter %}
+		{% if loop.index < 3 %}
+			{% if loop.index == 2 %}
+				<h2 class="text--uppercase font--condense">{{news.title}}</h2>
+			{% endif %}
+			<div class="block--tweet">
+				<div class="piece--twitter-user font--bold text--uppercase letter--1"><i class="icon-social--twitter" data-grunticon-embed></i> @{{tweet.user}}</div>
+				<div class="font--serif">{{tweet.text}}</div>
+
+			</div>
+		{% endif %}
+		
+	{% endfor %}
+	<a class="button underline color--black center" href="{{home.partners.newscta.link}}" target="{{home.partners.newscta.target}}" title="{{home.partners.newscta.title}}">{{home.partners.newscta.title}}</a>
+</div>

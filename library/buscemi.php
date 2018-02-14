@@ -90,8 +90,6 @@ if (function_exists('acf_add_options_page')) {
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';
 
-
-
 require_once 'tweet-php/TweetPHP.php';
 function getTwitter()
 {
@@ -116,9 +114,11 @@ function getTwitter()
     //     $formattedTweetArray[] = $TweetPHP->autolink($result);
 
     // }
+    // print_r($results);
     foreach ($results as $formattedTweets) {
         $compressedTweetArray[] = array(
             'date'      => strtotime($formattedTweets['created_at']),
+            'user'      => $formattedTweets['user']['screen_name'],
             'post_type' => 'twitter',
             'id'        => $formattedTweets['id_str'],
             'text'      => $TweetPHP->autolink($formattedTweets['text']),

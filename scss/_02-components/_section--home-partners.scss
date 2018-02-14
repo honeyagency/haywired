@@ -1,0 +1,50 @@
+.section--home-partners {
+    .block--home-twitter {
+        .icon-social--twitter {
+            width: 20px;
+            display: inline-block;
+
+            svg {
+                width: 100%;
+
+                path {
+                    fill: map-get($gray, dark);
+                }
+            }
+        }
+
+        .block--tweet {
+            line-height: 1.4;
+            border-bottom: 1px solid transparentize(map-get($gray, border), 0.8);
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            position: relative;
+
+            a {
+                color: $black;
+            }
+
+            + h2 {
+                margin: 0;
+                padding-bottom: 1rem;
+                padding-top: 1rem;
+                border-bottom: 1px solid transparentize(map-get($gray, border), 0.8);
+            }
+
+            &:last-of-type {
+                border: 0;
+
+                &:after {
+                    content: ' ';
+                    display: block;
+                    width: 100%;
+                    background-image: linear-gradient(180deg, transparent, #fff 80%);
+                    height: 80px;
+                    position: absolute;
+                    z-index: 9;
+                    bottom: 15px;
+                }
+            }
+        }
+    }
+}

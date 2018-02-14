@@ -1,9 +1,7 @@
 {% extends "tease.twig" %}
-
 {% block content %}
-	<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.get_preview(25)}}</p>
-		{% if post.thumbnail.src %}
-			<img src="{{post.thumbnail.src}}" />
-		{% endif %}
+	<h2 class="font--condense text--uppercase"><a class="color--green" href="{{post.link}}">{{post.title}}</a></h2>
+	<hr class="color--green thick fifty left margin--vert-2">
+	<div class="grid--one grid--sm-three-fourths grid--md-three-fifths font--large font--serif">{{post.excerpt}}</div>
+	
 {% endblock %}

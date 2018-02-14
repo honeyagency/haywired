@@ -136,7 +136,7 @@ function set_default_admin_color($user_id) {
 // Removing Some Admin Menus
 function remove_menus() {
     
-    // remove_menu_page( 'edit-comments.php' );          				//Comments
+    remove_menu_page( 'edit-comments.php' );          				//Comments
     
     
 }
