@@ -3,7 +3,7 @@
 		<div class="block--footer-nav spacing--vert-half">
 		<strong class="text--uppercase block">{{nav.title}}</strong>
 		{% for link in nav.links %}
-			<a class="block color--gray font--serif" href="{{link.link}}" target="{{link.target}}" title="{{link.title}}">{{link.title}}</a>
+			<a class="block color--gray font--serif" href="{{link.url}}" target="{{link.target}}" title="{{link.title}}">{{link.title}}</a>
 		{% endfor %}
 	</div>
 	{% endfor %}
