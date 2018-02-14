@@ -1,10 +1,10 @@
 {% extends "tease.twig" %}
 {% block content %}
-	<div>
+	<div class="news--excerpt">
 		<h4 class="font--condense font--larger">{{post.date|date('F d, Y')}}</h4>
 		<h2 class="font--condense text--uppercase"><a class="color--green" href="{{post.link}}">{{post.title}}</a></h2>
 		<hr class="color--green thick fifty left margin--vert-2">
-		<div class="grid--one grid--sm-three-fourths grid--md-three-fifths font--large font--serif margin--bot-1">{{post.excerpt}}</div>
+		<div class="font--large font--serif margin--bot-1">{{post.excerpt}}</div>
 		<a class="button underline color--black" href="{{post.link}}" target="_self" title="{{post.title}}">Read More</a>
 	</div>
 

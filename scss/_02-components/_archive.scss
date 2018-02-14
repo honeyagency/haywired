@@ -1,0 +1,11 @@
+.tease-news, .tease-events {
+    border-bottom: 1px solid map-get($gray, border);
+
+    &:last-of-type {
+        border-bottom: 0;
+    }
+
+    &:first-of-type {
+        padding-top: 0 !important;
+    }
+}

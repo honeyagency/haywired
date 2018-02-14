@@ -84,7 +84,9 @@ function getSinglePost($posttype = null)
         'image'      => $attachedimage,
         'link'       => get_permalink(),
     );
-
+    if ($posttype == 'events') {
+        $singlePostArray['event'] = prepareEventFields();
+    }
     // Restores original Post Data
     wp_reset_postdata();
 

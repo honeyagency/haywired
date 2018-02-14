@@ -32,8 +32,10 @@ if (is_front_page()) {
     $context['news']    = getCustomPosts('news', 1, null, 'date', null, null);
 } elseif (is_page(13)) {
     $context['informed'] = prepareBeInformedPage();
-}elseif (is_page( 162 )) {
-	$context['news']    = getCustomPosts('news', -1, null, 'date', null, null);
+} elseif (is_page(162)) {
+    $context['news'] = getCustomPosts('news', -1, null, 'date', null, null);
+} elseif (is_page(164)) {
+    $context['events'] = getCustomPosts('events', -1, null, 'date', null, null);
 }
 if ($post->post_parent == '16') {
     $context['resiliency'] = prepareResiliencyFields();

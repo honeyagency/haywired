@@ -104,7 +104,8 @@ function prepareSiteOptions()
         'resources' => get_field('field_5a7a39a3614fe', 'options'),
     );
     $options = array(
-        'header' => $header,
+        'signuptxt' => get_field('field_5a846e93f2910', 'options'),
+        'header'    => $header,
     );
     return $options;
 }
@@ -271,4 +272,14 @@ function prepareResiliencyFields()
     );
 
     return $section;
+}
+function prepareEventFields()
+{
+    $event = array(
+        'start_date' => get_field('field_5a8472804194d'),
+        'start_time' => get_field('field_5a84728c4194e'),
+        'end_date'   => get_field('field_5a8472954194f'),
+        'end_time'   => get_field('field_5a8472a241950'),
+    );
+    return $event;
 }

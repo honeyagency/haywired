@@ -11,7 +11,7 @@
 			<i class="icon-bg-map topright fade" data-grunticon-embed></i>
 			<div class="max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-6 relative ztop flex flex--wrap justify--between">
 				<div class="grid--one grid--sm-three-fifths">
-					{% for post in news %}
+					{% for post in events %}
 						{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 					{% endfor %}
 				</div>
