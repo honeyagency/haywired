@@ -1,0 +1,22 @@
+{% if post.event.start_date %}
+	{% if post.event.end_date %}
+		{% if post.event.start_time %}
+			{% if post.event.end_time %}
+				{{post.event.start_date|date('M d')}} {{post.event.start_time}} - {{post.event.end_date|date('M d, Y')}} {{post.event.end_time}}
+				
+			{% endif %}
+		{% else %}
+			{{post.event.start_date|date('M d')}} - {{post.event.end_date|date('M d, Y')}}
+		{% endif %}
+	{% else %}
+		{% if post.event.start_time %}
+			{% if post.event.end_time %}
+				{{post.event.start_date|date('M d, Y')}} {{post.event.start_time}} - {{post.event.end_time}}
+			{% else %}
+				{{post.event.start_date|date('M d, Y')}} {{post.event.start_time}}
+			{% endif %}
+		{% else %}
+			{{post.event.start_date|date('F d, Y')}}
+		{% endif %}
+	{% endif %}
+{% endif %}

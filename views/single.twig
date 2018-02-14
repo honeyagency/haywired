@@ -6,15 +6,38 @@
 				{% include 'components/sections/section--header.twig' %}
 			{% endif %}
 		{% endblock %}
-		
-		
 		<section class="section--be-informed-intro relative">
 			<div class="block--breadcrumbs spacing--horiz-1 spacing--vert-1">
 				<a href="{{site.url}}/be-informed/" class="font--condense text--uppercase color--gray">Be Informed <i class="icon-angle-right" data-grunticon-embed></i></a><a href="{{site.url}}/{{post.type.rewrite.slug}}" class="font--condense text--uppercase color--gray">{{post.type.labels.name}} <i class="icon-angle-right" data-grunticon-embed></i></a><span class="font--condense text--uppercase color--gray">{{post.title}}</span>
 			</div>
 			<i class="icon-bg-map topright fade hidden--mob" data-grunticon-embed></i>
 			<div class="max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-6 relative ztop">
-				<h4 class="font--condense font--larger">{{post.date}}</h4>
+				{% if post.post_type == 'news' %}
+					<h4 class="font--condense font--larger">{{post.date}}</h4>
+				{% elseif post.post_type == 'events' %}
+					<h4 class="font--condense font--larger">{% if event.start_date %}
+						{% if event.end_date %}
+							{% if event.start_time %}
+								{% if event.end_time %}
+									{{event.start_date|date('M d')}} {{event.start_time}} - {{event.end_date|date('M d, Y')}} {{event.end_time}}
+									
+								{% endif %}
+							{% else %}
+								{{event.start_date|date('M d')}} - {{event.end_date|date('M d, Y')}}
+							{% endif %}
+						{% else %}
+							{% if event.start_time %}
+								{% if event.end_time %}
+									{{event.start_date|date('M d, Y')}} {{event.start_time}} - {{event.end_time}}
+								{% else %}
+									{{event.start_date|date('M d, Y')}} {{event.start_time}}
+								{% endif %}
+							{% else %}
+								{{event.start_date|date('F d, Y')}}
+							{% endif %}
+						{% endif %}
+					{% endif %}</h4>
+				{% endif %}
 				<h1 class="font--condense text--uppercase"><a class="color--green" href="{{post.link}}">{{post.title}}</a></h1>
 				<hr class="color--green thick fifty left margin--vert-2">
 				<div class="grid--one grid--sm-three-fourths grid--md-three-fifths font--large font--serif">{{post.content}}</div>

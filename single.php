@@ -15,7 +15,7 @@ $context['post']         = $post;
 $context['comment_form'] = TimberHelper::get_comment_form();
 $context['settings']     = preparePageSettings();
 // print_r($post)
-if ($post->post_type == 'event') {
+if ($post->post_type == 'events') {
     $context['event'] = prepareEventFields();
 }
 if (post_password_required($post->ID)) {

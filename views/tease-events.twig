@@ -2,38 +2,10 @@
 {% block content %}
 	<div class="event--excerpt">
 		<h4 class="font--condense font--larger">
-		{% if post.event.start_date %}
-			{% if post.event.end_date %}
-				{% if post.event.start_time %}
-					{% if post.event.end_time %}
-						{{post.event.start_date|date('M d')}} {{post.event.start_time}} - {{post.event.end_date|date('M d, Y')}} {{post.event.end_time}}
-					{% else %}
-						{{post.event.start_date|date('M d')}} - {{post.event.end_date|date('M d, Y')}}
-					{% endif %}
-				{% else %}
-					{{post.event.start_date|date('M d')}} - {{post.event.end_date|date('M d, Y')}}
-				{% endif %}
-			{% else %}
-				{% if post.event.start_time %}
-					{% if post.event.end_time %}
-						{{post.event.start_date|date('M d, Y')}} {{post.event.start_time}} - {{post.event.end_time}}
-					{% else %}
-						{{post.event.start_date|date('M d, Y')}} {{post.event.start_date|date('M d')}} - {{post.event.start_time}}
-					{% endif %}
-				{% else %}
-					{{post.event.start_date|date('M d')}} - {{post.event.end_date|date('M d, Y')}}
-				{% endif %}
-			{% endif %}
-
-		{% endif %}
-		{# {{post.event.start_date|date('M d, Y')}}
-	{% endif %}
-{% endif %}
-{# {% if post.event.end_date %}{{post.event.end_date|date('M d, Y')}} {% endif %} #}
-{# {% if post.event.end_time %}{% if post.event.end_date %}{% else %}- {% endif %}{{post.event.end_time}}{% endif %}</h4> #}
-<h2 class="font--condense text--uppercase"><a class="color--green" href="{{post.link}}">{{post.title}}</a></h2>
-<hr class="color--green thick fifty left margin--vert-2">
-<div class="font--large font--serif margin--bot-1">{{post.excerpt}}</div>
-<a class="button underline color--black" href="{{post.link}}" target="_self" title="{{post.title}}">Read More</a>
-</div>
+		{% include 'components/blocks/block--event-data.twig' %}
+		<h2 class="font--condense text--uppercase"><a class="color--green" href="{{post.link}}">{{post.title}}</a></h2>
+		<hr class="color--green thick fifty left margin--vert-2">
+		<div class="font--large font--serif margin--bot-1">{{post.excerpt}}</div>
+		<a class="button underline color--black" href="{{post.link}}" target="_self" title="{{post.title}}">Read More</a>
+	</div>
 {% endblock %}
