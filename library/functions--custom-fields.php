@@ -308,7 +308,7 @@ function prepareReportsPageFields()
             $formattedReleaseDate = DateTime::createFromFormat('M d, Y H:i:s', $releaseDate);
             $interval             = date_create('now')->diff($formattedReleaseDate);
 
-            $volumes[]            = array(
+            $volumes[] = array(
                 'title'        => get_sub_field('field_5a847c22b2b42'),
                 'subtitle'     => get_sub_field('field_5a847c2db2b43'),
                 'interval'     => $interval,
@@ -319,12 +319,18 @@ function prepareReportsPageFields()
             );
         }
 
-    } 
+    }
+    $volumeBgImageId = get_field('field_5a848fd3b8efe');
+    $volumeBgImage   = null;
+    if (!empty($volumeBgImageId)) {
+        $volumeBgImage = new TimberImage($volumeBgImageId);
+    }
 
     $media = array(
-        'title'   => get_field('field_5a847ccf5d6ac'),
-        'content' => get_field('field_5a847cdb5d6ad'),
-        'cta'     => get_field('field_5a847ceb5d6ae'),
+        'volumebg' => $volumeBgImage,
+        'title'    => get_field('field_5a847ccf5d6ac'),
+        'content'  => get_field('field_5a847cdb5d6ad'),
+        'cta'      => get_field('field_5a847ceb5d6ae'),
     );
 
     $section = array(

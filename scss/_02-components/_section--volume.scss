@@ -1,19 +1,75 @@
-.section--volume{
-	.block--takeaways{
-		i{
-			width: 135px;
-			height: 89px;
-			display: inline-block;
-			svg{
-				height: 100%;
-				width: 100%;
-			}
-		}
-		.content{
-			text-transform: uppercase;
-			font-weight: 900;
-			line-height: 1.2;
+.section--volume {
+    .block--takeaways {
+        @include media($max-sm) {
+            text-align: center;
+            margin-top: 3em;
+        }
 
-		}
-	}
+
+        i {
+            width: 135px;
+            height: 89px;
+            display: inline-block;
+
+            svg {
+                height: 100%;
+                width: 100%;
+            }
+
+            @include media($max-sm) {
+                margin: 0 auto 1em auto;
+                display: block;
+            }
+        }
+
+        .content {
+            text-transform: uppercase;
+            font-weight: 900;
+            line-height: 1.2;
+            font-size: .9em;
+
+            p {
+                margin-bottom: 0;
+            }
+
+            .font--condense {
+                font-size: 2.3em;
+                line-height: 0.9;
+                margin-bottom: 4px;
+            }
+        }
+
+        hr {
+            width: 100%;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        position: relative;
+
+        &:before {
+            content: 'Key Takeaways';
+            font-size: 2em;
+            display: block;
+            position: absolute;
+
+            @extend .bg--green;
+
+            @extend .font--condense;
+
+            @extend .text--uppercase;
+
+            @extend .font--bold;
+
+            line-height: 0.8;
+            padding: 0.1em 0.2em 0.3em 0.2em;
+            transform: translateX(-50%) translateY(-50%);
+            top: 0;
+            left: 50%;
+
+            @include media($screen-sm) {
+                font-size: 2.3em;
+                left: 4em;
+            }
+        }
+    }
 }

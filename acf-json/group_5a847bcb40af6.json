@@ -73,6 +73,30 @@
             "endpoint": 0
         },
         {
+            "key": "field_5a848fd3b8efe",
+            "label": "Background Image",
+            "name": "volume_section_bg_image",
+            "type": "image",
+            "instructions": "If there's pending reports, this is the background for the section they live in.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5a847c0db2b41",
             "label": "Volumes",
             "name": "volumes",
@@ -330,5 +354,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1518633876
+    "modified": 1518637066
 }

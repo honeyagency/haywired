@@ -1,0 +1,55 @@
+.section--volume-unpublished {
+    background-color: transparentize(map-get($gray, dark), 0.2);
+    i{
+    	svg{
+    		text{
+    			fill: map-get($gray, main);
+    		}
+    		path{
+    			fill: map-get($gray, main);
+    		}
+    		circle{
+    			fill:transparent;
+    		}
+    	}
+    }
+
+    @include media($screen-xs){}
+    @include media($screen-sm){}
+    @include media($screen-md){
+    	margin:0;
+    }
+    @include media($screen-lg){}
+    @include media($screen-xl){}
+}
+
+.section--volume-unpublished[data-release] {
+    position: relative;
+
+    &:before {
+        content: attr(data-release);
+        position: absolute;
+        font-size: 2em;
+        display: block;
+        position: absolute;
+
+        @extend .bg--green;
+
+        @extend .font--condense;
+
+        @extend .text--uppercase;
+
+        @extend .font--bold;
+
+        color: $black;
+        line-height: 0.8;
+        padding: .1em .2em .3em;
+        transform: translateY(-50%);
+        top: 0;
+        right: .5em;
+
+        @include media($screen-sm) {
+            font-size: 2.3em;
+        }
+    }
+}
