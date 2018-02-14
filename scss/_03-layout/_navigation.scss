@@ -25,6 +25,7 @@ nav {
 
 
             .nav-drop {
+                opacity: 1;
                 transform: translateY(-100%);
                 z-index: 1;
                 background-color: map-get($gray, border);
@@ -79,7 +80,12 @@ header {
         margin-right: 1em;
     }
 }
-
+.wf-loading {
+    .nav-drop{
+        opacity: 0;
+    
+    }
+}
 .wf-loading {
     nav {
         ul {
