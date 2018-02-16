@@ -1,16 +1,16 @@
-$formbordercolor:           transparent;
-$formtextcolor:             map-get($gray, main);
-$formplaceholdercolor:      map-get($gray, main);
-$formbackground:            $white;
+$formbordercolor: transparent;
+$formtextcolor: map-get($gray, main);
+$formplaceholdercolor: map-get($gray, main);
+$formbackground: $white;
 
-$forminvalidbackground:     red;
-$forminvalidcolor:          white;
+$forminvalidbackground: red;
+$forminvalidcolor: white;
 
-$formsuccessbackground:     orange;
-$formsuccesstextcolor:      white;
+$formsuccessbackground: orange;
+$formsuccesstextcolor: white;
 
-$formbuttonbackground:      map-get($gray, formbutton);
-$formbuttoncolor:           map-get($gray, dark);
+$formbuttonbackground: map-get($gray, formbutton);
+$formbuttoncolor: map-get($gray, dark);
 
 fieldset {
     background-color: transparent;
@@ -37,12 +37,11 @@ textarea,
     font-family: $base-sans-font;
     color: $formtextcolor;
     appearance: none;
-
     border: none;
     border-radius: 0 !important;
     box-shadow: none;
     box-sizing: border-box;
-    padding:5px 10px;
+    padding: 5px 10px;
     transition: color .2s ease-in-out;
     font-weight: 900;
     letter-spacing: 0;
@@ -184,4 +183,13 @@ button, [type="submit"] {
     color: $formbuttoncolor;
     letter-spacing: 0px;
     text-transform: uppercase;
+}
+
+.gform_wrapper {
+    input,
+    select,
+    textarea,
+    #{$all-text-inputs},[type="submit"] {
+        padding: 0.5em 0.7em;
+    }
 }

@@ -1,4 +1,4 @@
-<nav role="navigation" class="grid--md-two-fifths">
+<nav role="navigation" class="grid--sm-three-fifths grid--lg-two-fifths">
 	<ul class="dsk--flex flex--wrap justify--between text--center grid--one">
 		{# {{menu.get_items|print_r}} #}
 		{% for item in menu.get_items %}
@@ -17,7 +17,7 @@
 					</ul>
 				{% endif %}
 			</li>
-			<div class="nav-border"></div>
+			<div class="nav-border {% if loop.last %}hidden--lg{% endif %}"></div>
 		{% endfor %}
 	</ul>
 </nav><!-- #nav -->
