@@ -220,7 +220,13 @@ hr {
 .wf-loading {
     .block--header-content {
         h2 {
+            font-family: HelveticaNeue-CondensedBold;
+            font-size: 1.7em;
+            line-height: 1.55;
+            letter-spacing: 0.3px;
+
             @include media($max-sm) {
+                font-family: HelveticaNeue-CondensedBold;
                 font-size: 1.4em;
                 letter-spacing: -0.5px;
                 line-height: 1.4;
