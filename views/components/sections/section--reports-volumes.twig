@@ -4,7 +4,7 @@
 	{% endif %}
 {% endfor %}
 <section class="section--volumes-unpublished bg spacing--vert-2 spacing--dsk-vert-6" {% if reports.media.volumebg %}style="background-image:url('{{reports.media.volumebg|resize(1280)}}');"{% endif %}>
-<div class="flex--double flex--wrap justify--between spacing--gutter margin--center max-wrap">
+<div class="flex--double flex--wrap justify--between spacing--gutter margin--center max-wrap spacing--vert-3">
 {% for volume in reports.volumes %}
 	{% if volume.interval.invert == 0 %}
 		{% include 'components/sections/section--volume-unpublished.twig' %}
