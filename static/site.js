@@ -15,13 +15,12 @@ jQuery(document).ready(function($) {
     $search = $('.trigger--search');
     $search.on('click touchstart', function(event) {
         event.preventDefault();
-   
 
         function openSearch(scrollPosition) {
-                 var scrollPosition = [
-            self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-            self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-        ];
+            var scrollPosition = [
+                self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+                self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            ];
             $('body').addClass('letssearch');
             $('.search-field').focus();
             var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
@@ -32,10 +31,10 @@ jQuery(document).ready(function($) {
         }
 
         function closeSearch(scrollPosition) {
-                 var scrollPosition = [
-            self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-            self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-        ];
+            var scrollPosition = [
+                self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+                self.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            ];
             $('body').removeClass('letssearch');
             var html = jQuery('html');
             var scrollPosition = html.data('scroll-position');
@@ -83,9 +82,15 @@ jQuery(document).ready(function($) {
                 $child.addClass('open');
             }
         });
-    }else{
-         if ($('video').length > 0) {
-            $('video').attr('autoplay', true);
-         }
+        if ($('video').length > 0) {
+            // $('video')
+        }
+    } else {
+        if ($('video').length > 0) {
+            $('video').attr({
+                preload: 'true',
+                autoplay: 'true'
+            });
+        }
     }
 });
