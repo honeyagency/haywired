@@ -5,5 +5,5 @@
 	{% if social.facebook.url %}<a href="{{social.facebook.url}}" target="{{social.facebook.target}}" title="Follow {{social.facebook.title}} on Facebook"><i class="icon-social--facebook" data-grunticon-embed></i></a>{% endif %}
 	{% if social.twitter.url %}<a href="{{social.twitter.url}}" target="{{social.twitter.target}}" title="Follow {{social.twitter.title}} on Twitter"><i class="icon-social--twitter" data-grunticon-embed></i></a>{% endif %}
 	{% if social.instagram.url %}<a href="{{social.instagram.url}}" target="{{social.instagram.target}}" title="Follow {{social.instagram.title}} on Instagram"><i class="icon-social--instagram" data-grunticon-embed></i></a>{% endif %}
-	{% if extras == 'false' %}{% else %}<i class="icon-social--search" data-grunticon-embed></i>{% endif %}
+	{% if extras == 'false' %}{% else %}<a href="" class="trigger--search"><i class="icon-social--search" data-grunticon-embed></i></a>{% endif %}
 </section>

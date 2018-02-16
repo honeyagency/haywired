@@ -1,6 +1,7 @@
 {% extends "tease.twig" %}
 {% block content %}
 	<div class="event--excerpt">
+		{% if search == 'true' %}<span class="text--uppercase letter--1 font--small color--gray-medium">Event</span>{% endif %}
 		<h4 class="font--condense font--larger">
 		{% include 'components/blocks/block--event-data.twig' %}
 		<h2 class="font--condense text--uppercase"><a class="color--green" href="{{post.link}}">{{post.title}}</a></h2>

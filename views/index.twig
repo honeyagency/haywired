@@ -1,9 +1,18 @@
 {% extends "base.twig" %}
-
 {% block content %}
-	<h2>{{foo}}</h2>
-	<p>{{qux}}</p>
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
+	{% block contentheader %}
+		{% include 'components/sections/section--header.twig' %}
+	{% endblock %}
+	<section class="section--search-results relative  bg--white">
+		<div class="max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-6 relative ztop flex flex--wrap justify--between">
+			<div class="grid--one grid--sm-three-fifths">
+				{% for post in posts %}
+					{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] with {'search':'true'} %}
+				{% endfor %}
+			</div>
+			<div class="block--search-results-aside grid--one grid--sm-one grid--md-third">
+				{% include 'components/blocks/block--search.twig' %}
+			</div>
+		</div>
+	</section>
 {% endblock %}

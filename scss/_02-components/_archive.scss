@@ -1,4 +1,4 @@
-.tease-news, .tease-events {
+.tease-news, .tease-events, .tease-page, .tease-post {
     border-bottom: 1px solid map-get($gray, border);
 
     &:last-of-type {
@@ -7,5 +7,11 @@
 
     &:first-of-type {
         padding-top: 0 !important;
+    }
+
+    .search-excerpt {
+        a {
+            display: none !important;
+        }
     }
 }

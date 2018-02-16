@@ -1,9 +1,12 @@
 <article class="tease tease-{{post.post_type}} spacing--vert-4" id="tease-{{post.ID}}">
 	{% block content %}
-		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.get_preview}}</p>
-		{% if post.get_thumbnail %}
-			<img src="{{post.thumbnail.src}}" />
+		<div class="post--excerpt">
+		<h2 class="font--condense text--uppercase"><a class="color--black" href="{{post.link}}">{{post.title}}</a></h2>
+		<hr class="color--green thick fifty left margin--vert-2">
+		{% if search == 'true' %}
+			<div class="search-excerpt font--large font--serif margin--bot-1">{{post.get_preview}}</div>
 		{% endif %}
+		<a class="button underline color--black" href="{{post.link}}" target="_self" title="{{post.title}}">Read More</a>
+	</div>
 	{% endblock %}
 </article>

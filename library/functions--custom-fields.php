@@ -113,6 +113,7 @@ function prepareSiteOptions()
     $options = array(
         'signuptxt' => get_field('field_5a846e93f2910', 'options'),
         'header'    => $header,
+        'search'    => get_search_form(false),
     );
     return $options;
 }
@@ -355,7 +356,7 @@ function prepareResiliencyPage()
         'content' => get_field('field_5a872a5baab8b'),
         'cta'     => get_field('field_5a872a5baab8b'),
     );
-    
+
     if (have_rows('field_5a872a5baac7a')) {
         $links = array();
         while (have_rows('field_5a872a5baac7a')) {
