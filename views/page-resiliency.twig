@@ -8,6 +8,6 @@
 		
 		{% include 'components/sections/section--resiliency-intro.twig' %}
 		{% include 'components/sections/section--resiliency-challenge.twig' %}
-		{% include 'components/sections/section--resiliency-example.twig' %}
+		{% if resiliency.example.title and resiliency.example.name %}{% include 'components/sections/section--resiliency-example.twig' %}{% endif %}
 	</article>
 {% endblock %}
