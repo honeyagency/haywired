@@ -1,8 +1,9 @@
-<section class="section--home-header spacing--vert-5">
-	<div class="block--header-content"><i class="icon-round-logo" data-grunticon-embed></i>
-		<h2 class="color--white text--uppercase font--condense grid--sm-three-fourths grid--md-half margin--center spacing--vert-1">{{home.video.content}}</h2>
+<section class="section--home-header spacing--vert-2 spacing--dsk-vert-5">
+	<div class="block--header-content grid--three-fourths grid--sm-one margin--center">
+		<i class="icon-round-logo hidden--mob" data-grunticon-embed></i>
+		<h2 class="color--white text--uppercase font--condense grid--one grid--sm-three-fourths grid--md-half margin--center spacing--vert-1">{{home.video.content}}</h2>
 	</div>
-	<div class="block--header-video">
+	<div class="block--header-video hidden--mob">
 			<video width="100%" autobuffer autoplay="true" preload='auto' poster="{{home.video.poster|resize(800)}}">
 			<source type="video/webm" src="{{home.video.webm}}">
 			<source type="video/mp4" src="{{home.video.mp4}}">
@@ -13,5 +14,9 @@
 			</object>
 		</video>
 	</div>
+	<div class="block--header-image hidden--dsk">
 	
+	<img src="{{home.video.mobile|resize(480)}}" data-original="{{home.video.mobile|resize(1200)}}" alt="{{home.video.mobile.caption}}" data-original-set="{{home.video.mobile|resize(640)}}  640w,{{home.video.mobile|resize(750)}}  750w,{{home.video.mobile|resize(1080)}} 1080w,{{home.video.mobile|resize(1280)}} 1280w" sizes="100vw">
+
+	</div>
 </section>

@@ -1,7 +1,7 @@
 .menu--trigger {
     @include media($max-sm) {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         position: relative;
         display: block;
         -webkit-tap-highlight-color: transparent !important;
@@ -10,7 +10,7 @@
         span {
             height: 1px;
             width: 100%;
-            border-bottom: 1px solid;
+            border-bottom: 2px solid;
             top: 50%;
             position: relative;
             transform: translateY(-50%);
@@ -21,6 +21,8 @@
 
         &:after,
         &:before {
+            @include accelerate;
+
             display: block;
             position: absolute;
             width: 100%;
@@ -32,12 +34,12 @@
         }
 
         &:before {
-            border-top: 1px solid;
+            border-top: 2px solid;
             top: 0;
         }
 
         &:after {
-            border-bottom: 1px solid;
+            border-bottom: 2px solid;
             bottom: 0;
         }
     }
@@ -45,27 +47,145 @@
 
 nav {
     @include media($max-sm) {
+        z-index: 999999;
         transition: transform 0.3s $base-animation;
         position: absolute;
-        top: 74px;
+        top: 56px;
         left: 0;
-        right: 0;
-        bottom: 0;
         width: 100%;
         height: 100%;
-        z-index: 999999;
-        font-size: 1.3em;
+        background-color: $white;
+        padding: 1em 0.35em 1em 1em;
 
         ul {
-            width: 100%;
-            height: 100%;
-            display: block;
-            background-color: white;
-
             li {
-                width: 100%;
-                display: block;
-                padding: 1em 0 2em 0;
+                text-align: left;
+
+                &.menu-item-has-children {
+                    position: relative;
+                    width: 100%;
+                    display: block;
+
+                    > .nav-link {
+                        z-index: 9;
+                        position: relative;
+                        font-size: 1.3em;
+                        width: 100%;
+                        display: block;
+                        color: $black;
+                        background-color: $white;
+
+                        .title {
+                            font-size: 1.8em;
+                        }
+
+                        .description {
+                            font-size: 0.7em;
+                            font-weight: 100;
+                            text-transform: uppercase;
+                            letter-spacing: 0.7px;
+                            font-family: $default-font;
+                        }
+                    }
+
+                    .section--child-nav {
+                        @include accelerate;
+
+                        transform: translateY(-100%);
+                        margin-bottom: -2em;
+                        opacity: 0;
+                        padding: 0;
+                        transition: padding 0.3s $base-animation, margin 0.3s $base-animation, opacity 0.1s $base-animation, transform 0.3s $base-animation;
+
+                        .nav-drop-item {
+                            @include accelerate;
+
+                            z-index: 8;
+                            background-color: $white;
+                            position: relative;
+                            width: 100%;
+
+                            .nav-link {
+                                border-top: 0;
+                                font-family: $base-sans-font;
+                                padding-top: 0;
+                                padding-bottom: .2em;
+                            }
+
+                            transform: translateY(-85%);
+                            padding: 0;
+                            transition: margin 0.3s $base-animation, transform 0.3s $base-animation, padding 0.3s $base-animation;
+                        }
+                    }
+
+                    .trigger--children {
+                        @include accelerate;
+
+                        text-align: right;
+                        cursor: pointer;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 42%;
+                        height: 55px;
+                        line-height: 1.2;
+                        z-index: 9998;
+                        font-size: 26px;
+                        transform-origin: center;
+
+                        span {
+                            transform-origin: center;
+                            color: map-get($gray, dark);
+                            position: relative;
+                            transition: transform 0.4s $base-animation, background 0.4s $base-animation, color 0.4s $base-animation;
+                            width: 30px;
+                            height: 30px;
+                            margin-top: 12px;
+                            margin-right: 5px;
+                            display: inline-block;
+                            text-align: center;
+                            font-weight: 100;
+                            background: transparent;
+                            line-height: 1.15;
+                            border-radius: 100%;
+                        }
+                    }
+
+                    &.children--visible {
+                        .trigger--children {
+                            span {
+                                @include accelerate;
+
+                                background: map-get($gray, main);
+                                color: $white;
+                                transition: transform 0.4s $base-animation, background 0.4s $base-animation, color 0.4s $base-animation;
+                                transform: rotate(-45deg);
+                            }
+                        }
+
+                        .section--child-nav {
+                            @include accelerate;
+
+                            transform: translateY(0) translateX(0.5em);
+                            margin-bottom: 0;
+                            opacity: 1;
+                            transition: margin 0.3s $base-animation, opacity 0.3s $base-animation, transform 0.3s $base-animation;
+
+                            .nav-drop-item {
+                                @include accelerate;
+
+                                transform: translateY(0);
+                                margin-bottom: 0em;
+                                padding: .5em 0;
+                                transition: margin 0.3s $base-animation, transform 0.3s $base-animation, padding 0.3s $base-animation;
+
+                                &:last-of-type {
+                                    margin: 0 0 0.7em;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -85,17 +205,20 @@ body.navopen {
     .menu--trigger {
         background-color: transparent;
 
-        &:after, &:before {
+        &:after,
+        &:before {
+            @include accelerate;
+
             transition: transform 0.3s $base-animation;
         }
 
         &:before {
-            transform: translateY(9.5px) rotate(45deg);
+            transform: translateY(11.5px) rotate(45deg);
         }
 
         &:after {
             transform: rotate(45deg);
-            transform: translateY(-9.5px) rotate(-45deg);
+            transform: translateY(-11.5px) rotate(-45deg);
         }
 
         span {
@@ -108,40 +231,5 @@ body.navopen {
         transition: transform 0.4s $base-animation;
         transform: translateY(0);
 
-        ul {
-            li {
-                &:nth-of-type(1) {
-                    transition: transform 0.75s $base-animation;
-                    z-index: 60;
-                }
-
-                &:nth-of-type(2) {
-                    transition: transform 0.7s $base-animation;
-                    z-index: 30;
-                }
-
-                &:nth-of-type(3) {
-                    transition: transform 0.6s $base-animation;
-                    z-index: 20;
-                }
-
-                &:nth-of-type(4) {
-                    transition: transform 0.5s $base-animation;
-                    z-index: 15;
-                }
-
-                &:nth-of-type(5) {
-                    transition: transform 0.4s $base-animation;
-                    z-index: 12;
-                }
-
-                &:nth-of-type(6) {
-                    transition: transform 0.3s $base-animation;
-                    z-index: 10;
-                }
-
-                transform: translateY(0);
-            }
-        }
     }
 }

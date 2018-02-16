@@ -8,11 +8,19 @@ function prepareHomepageFields()
     } else {
         $videoPoster = null;
     }
+    $mobileImageId = get_field('field_5a85e8b69eb0d');
+    if ($mobileImageId != null) {
+        $mobileImage = new TimberImage($mobileImageId);
+    } else {
+        $mobileImage = null;
+    }
+
     $video = array(
         'ogg'     => get_field('field_5a6a719de9ce1'),
         'webm'    => get_field('field_5a6a7208e9ce2'),
         'mp4'     => get_field('field_5a6a7225e9ce3'),
         'poster'  => $videoPoster,
+        'mobile'  => $mobileImage,
         'content' => get_field('field_5a6a7ba788d96'),
     );
     $what = array(
@@ -30,7 +38,6 @@ function prepareHomepageFields()
     $countdown = array(
         'time'     => $countdownTime,
         'interval' => $interval,
-
         'title'    => get_field('field_5a6a72b1e9cec'),
         'content'  => get_field('field_5a6a72cae9ced'),
         'cta'      => get_field('field_5a6a72e4e9cee'),

@@ -216,3 +216,15 @@ hr {
         margin-right: 0;
     }
 }
+
+.wf-loading {
+    .block--header-content {
+        h2 {
+            @include media($max-sm) {
+                font-size: 1.4em;
+                letter-spacing: -0.5px;
+                line-height: 1.4;
+            }
+        }
+    }
+}

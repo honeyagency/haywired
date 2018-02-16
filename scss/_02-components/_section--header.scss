@@ -25,9 +25,13 @@
         }
 
         img {
-            width: 100%;
+            min-width: 100%;
             position: relative;
             top: 50%;
+            transform: translateY(-50%);
+            min-height: 100%;
+            max-width: auto;
+            position: relative;
             transform: translateY(-50%);
         }
     }
