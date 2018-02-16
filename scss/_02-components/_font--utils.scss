@@ -29,6 +29,10 @@
 .font--huge {
     font-size: 3em;
     letter-spacing: 0;
+
+    @include media($max-sm) {
+        line-height: 1;
+    }
 }
 
 .font--volume {
@@ -46,13 +50,17 @@
 .font--condense {
     font-family: $second-sans-font;
 }
-.wf-loading{
-    .font--condense{
-            font-family: HelveticaNeue-CondensedBold;
-    // font-size: 1.2em;
-    // margin: 3px 0;
+
+.wf-loading {
+    .font--condense {
+        font-family: HelveticaNeue-CondensedBold;
+
+        // font-size: 1.2em;
+        // margin: 3px 0;
+   
     }
 }
+
 .font--tiny {
     font-size: .85em;
     line-height: 1.3;
