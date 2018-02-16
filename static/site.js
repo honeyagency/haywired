@@ -83,5 +83,9 @@ jQuery(document).ready(function($) {
                 $child.addClass('open');
             }
         });
+    }else{
+         if ($('video').length > 0) {
+            $('video').attr('autoplay', true);
+         }
     }
 });
