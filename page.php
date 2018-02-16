@@ -37,6 +37,8 @@ if (is_front_page()) {
     }
 } elseif (is_page(13)) {
     $context['informed'] = prepareBeInformedPage();
+} elseif (is_page(16)) {
+    $context['resilient'] = prepareResiliencyPage();
 } elseif (is_page(162)) {
     $context['news'] = getCustomPosts('news', -1, null, 'date', null, null);
 } elseif (is_page(164)) {

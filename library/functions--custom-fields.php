@@ -348,3 +348,38 @@ function prepareReportsPageFields()
     return $section;
 
 }
+function prepareResiliencyPage()
+{
+    $intro = array(
+        'title'   => get_field('field_5a872a5baab6a'),
+        'content' => get_field('field_5a872a5baab8b'),
+        'cta'     => get_field('field_5a872a5baab8b'),
+    );
+    
+    if (have_rows('field_5a872a5baac7a')) {
+        $links = array();
+        while (have_rows('field_5a872a5baac7a')) {
+            the_row();
+            $links[] = array(
+                'title'       => get_sub_field('field_5a872a5bcca07'),
+                'description' => get_sub_field('field_5a872a5bcca1c'),
+                'link'        => get_sub_field('field_5a872a5bcca2a'),
+            );
+        }
+    }
+    $bgImageId = get_field('field_5a872a5baac68');
+    $bgImage   = null;
+    if (!empty($bgImageId)) {
+        $bgImage = new TimberImage($bgImageId);
+    }
+    $linksection = array(
+        'links' => $links,
+        'image' => $bgImage,
+    );
+    $section = array(
+        'intro' => $intro,
+
+        'links' => $linksection,
+    );
+    return $section;
+}
