@@ -100,6 +100,30 @@
             "mime_types": ""
         },
         {
+            "key": "field_5a875b31aaab7",
+            "label": "Mobile Image",
+            "name": "mobile_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5a6a7ba788d96",
             "label": "Header Content",
             "name": "header_content",
@@ -592,5 +616,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1518807960
+    "modified": 1518820156
 }

@@ -8,7 +8,7 @@ function prepareHomepageFields()
     } else {
         $videoPoster = null;
     }
-    $mobileImageId = get_field('field_5a85e8b69eb0d');
+    $mobileImageId = get_field('field_5a875b31aaab7');
     if ($mobileImageId != null) {
         $mobileImage = new TimberImage($mobileImageId);
     } else {
