@@ -1,4 +1,5 @@
-<div class="block--home-twitter grid--one grid--md-third">
+<div class="block--home-twitter grid--one {% if home.partners.title and home.partners.name %}grid--md-third{% else %}grid--md-half{% endif %}">
+	{% if home.partners.title and home.partners.name %}{% else %}<h3 class="transform--no font--huge">News</h3>{% endif %}
 	{% for tweet in twitter %}
 		{% if loop.index < 3 %}
 			{% if loop.index == 2 %}
