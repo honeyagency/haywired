@@ -188,7 +188,16 @@ ol {
 
 a {
     text-decoration: none;
-    color: $link-color;
+    color: $base-font-color;
+}
+
+article {
+    p, ul, ol {
+        a {
+            border-bottom: 1px solid;
+            font-family: $base-sans-font;
+        }
+    }
 }
 
 code, pre {
@@ -232,5 +241,14 @@ hr {
                 line-height: 1.4;
             }
         }
+    }
+}
+
+.column--2 {
+    column-count: 2;
+
+    &.border {
+        column-rule: 1px solid map-get($gray, border);
+        column-gap: 2em;
     }
 }
