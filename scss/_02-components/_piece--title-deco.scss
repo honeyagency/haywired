@@ -103,4 +103,11 @@
             letter-spacing: -0.2px !important;
         }
     }
+
+    h2.deco {
+        @include media($screen-sm) {
+            letter-spacing: -0.6px;
+            font-size: 1.8em;
+        }
+    }
 }
