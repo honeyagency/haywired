@@ -458,3 +458,24 @@ function prepareChallengeResources()
     );
     return $section;
 }
+function prepareSubmissionIntro()
+{
+    $intro = array(
+        'title'   => get_field('field_5ad666ce6942e'),
+        'content' => get_field('field_5ad666d56942f'),
+    );
+    $formId = get_field('field_5ad66a1dcdfce');
+    $formObject = gravity_form($formId, false, false, false, null, true, null, false);
+    $form   = array(
+        'title' => get_field('field_5ad66a0ecdfcd'),
+        'form'  => $formObject,
+
+    );
+    
+
+    $section = array(
+        'intro' => $intro,
+        'form'  => $form,
+    );
+    return $section;
+}

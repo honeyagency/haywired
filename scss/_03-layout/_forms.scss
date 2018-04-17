@@ -193,3 +193,33 @@ button, [type="submit"] {
         padding: 0.5em 0.7em;
     }
 }
+
+form {
+    ul {
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            list-style-type: none;
+            margin: 0;
+        }
+
+        &.gfield_checkbox {
+            li {
+                @extend .flex;
+
+                @extend .align--items-start;
+
+                @extend .justify--between;
+
+                @extend .flex--wrap;
+
+                label {
+                    flex-basis: calc(100% - 60px);
+                }
+
+                margin-bottom: 2em;
+            }
+        }
+    }
+}

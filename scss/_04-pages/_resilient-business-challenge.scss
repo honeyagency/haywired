@@ -14,3 +14,119 @@
         }
     }
 }
+
+.section--challenge-submission-intro {
+    i {
+        float: none;
+    }
+}
+
+.section--challenge-form-wrap {
+    margin: 0 auto;
+    max-width: 925px;
+    top: -4em;
+    position: relative;
+    z-index: 999999999;
+
+    form {
+        .gform_fields {
+            @extend .flex;
+
+            @extend .justify--between;
+
+            @extend .align--items-baseline;
+
+            @extend .flex--wrap;
+        }
+
+        .challenge-check {
+            @extend .grid--one;
+
+            @extend .grid--sm-half;
+        }
+
+        input {
+            width: 100% !important;
+            margin-bottom: 1em;
+            border: 1px solid #c1c1c1;
+        }
+
+        label {
+            @extend .screenreader;
+        }
+
+        .ginput_container_name {
+            @extend .flex;
+
+            @extend .justify--between;
+
+            @extend .align--items-baseline;
+
+            @extend .flex--wrap;
+
+            .name_first, .name_last {
+                @extend .grid--half;
+            }
+        }
+
+        [type="checkbox"] {
+            border: 5px solid map-get($gray, dark) !important;
+            margin: 0 !important;
+            height: 30px !important;
+            width: 30px !important;
+            display: inline-block;
+            padding: 0 !important;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: ' ';
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                background: $green;
+                display: block;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                opacity: 0;
+            }
+
+            &:hover {
+                transition: background 0.2s $base-animation;
+                background: transparentize(map-get($gray, dark), 0.9);
+            }
+
+            transition: background 0.2s $base-animation;
+
+            &:checked {
+                transition: background 0.2s $base-animation;
+                background: transparentize(map-get($gray, dark), 0.2);
+
+                &:before {
+                    transition: opacity 0.2s $base-animation;
+                    opacity: 1;
+                }
+            }
+
+            + label {
+                position: relative;
+                left: unset;
+                top: auto;
+                height: auto;
+                width: auto;
+                overflow: visible;
+                font-size: 1em;
+                text-transform: uppercase;
+                line-height: 1.5;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        .gform_button {
+            background-color: $green;
+            font-size: 2em;
+            border: 0 !important;
+        }
+    }
+}
