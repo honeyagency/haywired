@@ -12,4 +12,10 @@
     }
 
     line-height: 1.2;
+
+    &.center {
+        display: table !important;
+
+        text-align: center;
+    }
 }

@@ -1,0 +1,13 @@
+<section class="section--be-informed-links spacing--gutter spacing--vert-4 bg" {% if informed.links.image %}style="background-image:url('{{informed.links.image|resize(1280)}}');"{% endif %}>
+<div class="flex flex--wrap margin--center max-wrap justify--around">
+	{% for link in informed.links.links %}
+		<div class="block--link grid--one grid--sm-third grid--lg-fourth text--center spacing--vert-3 spacing--horiz-1">
+			<h2 class="font--condense text--uppercase color--green">{{link.title}}</h2>
+			<div class="color--white spacing--vert-1">
+				{{link.description}}
+			</div>
+			<a class="button underline color--white" href="{{link.link.url}}" target="{{link.link.target}}" title="{{link.link.title}}">{{link.link.title}}</a>
+		</div>
+	{% endfor %}
+</div>
+</section>

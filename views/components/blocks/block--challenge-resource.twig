@@ -1,0 +1,9 @@
+<div class="block--challenge-resource bg--gray-light challenge-wrap margin--center margin--vert-1 margin--dsk-vert-2 spacing--vert-2 spacing--dsk-vert-4 spacing--dsk-horiz-4 spacing--gutter-mob grid--md-one">
+	<div class="flex flex--wrap justify--between align--items-baseline"> 
+	<h2 class="font--condense h1">{{resource.title}}</h2>
+	<a href="{{resource.link.url}}" title="{{resource.link.title}}" target="{{resource.link.target}}" class="underline button">{{resource.link.title}}</a>
+</div>
+	{% for content in resource.content %}
+		{% include 'components/blocks/block--challenge-resource-content.twig' %}
+	{% endfor %}
+</div>

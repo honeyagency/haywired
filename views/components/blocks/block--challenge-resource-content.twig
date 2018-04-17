@@ -1,0 +1,7 @@
+<div class="block--challenge-resource-content">
+	{% if content.title %}<hr class="color--gray-medium {% if loop.index > 1 %}margin--top-2{% endif %} margin--bot-1"><strong class="text--uppercase letter--1  block">{{content.title}}</strong>{% endif %}
+	<div class="column--2 font--serif font--medium margin--top-1">
+		{% if content.subtitle %}<h6 class="all font--serif transform--no letter--0 font--medium font--bold">{{content.subtitle}}</h6>{% endif %}
+		{{content.content}}
+	</div>
+</div>

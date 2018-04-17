@@ -1,0 +1,9 @@
+<section class="section--challenge-resources-intro relative bg--gray-dark">
+	{% if post.post_parent != 0 %}{% include 'components/blocks/block--breadcrumbs.twig' %}{% endif %}
+	<div class="text--center spacing--gutter spacing--vert-4 spacing--dsk-vert-6">
+		<h2 class="font--condense text--uppercase color--green">{{challenge.intro.title}}</h2>
+		<hr class="color--green thick fifty margin--vert-2">
+		<div class="grid--one grid--sm-three-fourths grid--md-three-fifths color--white margin--center font--large font--serif">{{challenge.intro.content}}</div>
+		<a href="{{challenge.intro.link.url}}" class="button underline color--white text--uppercase font--bold letter--1">{{challenge.intro.link.title}}</a>
+	</div>
+</section>

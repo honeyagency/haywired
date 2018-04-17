@@ -68,8 +68,8 @@
 
 .spacing--gutter-mob {
 	@include media($max-sm){
-	padding-right: .7em * $grid;
-	padding-left: .7em * $grid;
+	padding-right: 1.7em * $grid;
+	padding-left: 1.7em * $grid;
 }
 
  

@@ -1,0 +1,16 @@
+.page-id-497, .section--challenge-resources-intro {
+    .block--breadcrumbs {
+        margin-bottom: -65px;
+    }
+}
+
+.block--challenge-resource-content {
+    ul {
+        li {
+            margin-bottom: 1em;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<section class="section--challenge-links spacing--gutter spacing--vert-6 bg" {% if challenge.image %}style="background-image:url('{{challenge.image|resize(1280)}}');"{% endif %}>
+<div class=" flex--wrap flex--double margin--center max-wrap justify--around">
+	{% for tier in challenge.tiers %}
+		<div class="block--link grid--one grid--xs-four-fifths  grid--md-third spacing--vert-2 spacing--dsk-vert-5 spacing--horiz-2 bg--gray-light margin--bot-1">
+			<h2 class="font--condense text--center text--uppercase margin--bot-1">{{tier.title}}</h2>
+			<hr class="color--black grid--sm-half grid--md-third">
+			<div class="font--serif font--large spacing--vert-1">
+				{{tier.content}}
+			</div>
+			<a class="button underline center" href="{{tier.link.url}}" target="{{tier.link.target}}" title="{{tier.link.title}}">{{tier.link.title}}</a>
+		</div>
+	{% endfor %}
+</div>
+</section>

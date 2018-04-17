@@ -384,3 +384,77 @@ function prepareResiliencyPage()
     );
     return $section;
 }
+function challengePageOne()
+{
+    $intro = array(
+        'title'   => get_field('field_5ad627d1d5081'),
+        'content' => get_field('field_5ad627dfd5082'),
+
+    );
+    $right = array(
+        'title' => get_field('field_5ad62c131c5e2'),
+        'link'  => get_field('field_5ad62c221c5e3'),
+    );
+    $tierImageId = get_field('field_5ad6282255547');
+    $tierImage   = null;
+    if (!empty($tierImageId)) {
+        $tierImage = new TimberImage($tierImageId);
+    }
+
+    if (have_rows('field_5ad6280555546')) {
+        $tiers = array();
+        while (have_rows('field_5ad6280555546')) {
+            the_row();
+            $tiers[] = array(
+                'title'   => get_sub_field('field_5ad6283c55548'),
+                'content' => get_sub_field('field_5ad6284655549'),
+                'link'    => get_sub_field('field_5ad6285c5554a'),
+            );
+        }
+    } else {
+        $tiers = null;
+    }
+    $challenge = array(
+        'intro' => $intro,
+        'right' => $right,
+        'image' => $tierImage,
+        'tiers' => $tiers,
+    );
+    return $challenge;
+}
+function prepareChallengeResources()
+{
+    $intro = array(
+        'title'   => get_field('field_5ad6394d74b1c'),
+        'content' => get_field('field_5ad6395974b1d'),
+        'link'    => get_field('field_5ad6396b74b1e'),
+    );
+
+    if (have_rows('field_5ad639a39bd0d')) {
+        $resources = array();
+        while (have_rows('field_5ad639a39bd0d')) {
+            the_row();
+            if (have_rows('field_5ad63a0c9bd11')) {
+                $content = array();
+                while (have_rows('field_5ad63a0c9bd11')) {
+                    the_row();
+                    $content[] = array(
+                        'title'    => get_sub_field('field_5ad63ee6ab185'),
+                        'subtitle' => get_sub_field('field_5ad63a1a9bd12'),
+                        'content'  => get_sub_field('field_5ad63a359bd13'),
+                    );
+                }
+            }
+            $resources[] = array(
+                'title'   => get_sub_field('field_5ad639c29bd0e'),
+                'link'    => get_sub_field('field_5ad639df9bd0f'),
+                'content' => $content,
+            );
+        }
+    }
+    $section = array(
+        'intro'     => $intro,
+        'resources' => $resources,
+    );
+    return $section;
+}

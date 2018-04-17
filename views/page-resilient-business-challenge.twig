@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		{% block contentheader %}
+			{% include 'components/sections/section--header.twig' %}
+		{% endblock %}
+		{# challenge.intro #}
+		<div class="relative bg--gray-light">
+			{% if post.post_parent != 0 %}{% include 'components/blocks/block--breadcrumbs.twig' %}{% endif %}
+			{% include 'components/sections/section--challenge-intro.twig' %}
+		</div>
+		{% include 'components/sections/section--challenge-links.twig' %}
+	</article>
+{% endblock %}

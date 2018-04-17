@@ -67,11 +67,11 @@ function slider_scripts()
 function buscemi_scripts()
 {
     wp_enqueue_script('jquery');
-    // if (localInstall() == true) {
-    //     $reloadScript = 'http://localhost:35729/livereload.js';
-    //     wp_register_script('livereload', $reloadScript, null, false, true);
-    //     wp_enqueue_script('livereload');
-    // }
+    if (localInstall() == true) {
+        $reloadScript = 'http://localhost:35729/livereload.js';
+        wp_register_script('livereload', $reloadScript, null, false, true);
+        wp_enqueue_script('livereload');
+    }
     wp_register_script('lazyload', get_template_directory_uri() . '/app/vendors/lazyload.min.js', null, false, true);
     wp_enqueue_script('lazyload');
     wp_register_script('appear', get_template_directory_uri() . '/app/vendors/appear.min.js', null, false, true);

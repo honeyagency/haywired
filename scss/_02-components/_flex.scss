@@ -11,9 +11,11 @@
 .flex--wrap {
     flex-wrap: wrap;
 }
-.flex--column{
+
+.flex--column {
     flex-direction: column;
 }
+
 .justify--between {
     justify-content: space-between;
 }
@@ -41,12 +43,22 @@
 .align--items-baseline {
     align-items: baseline;
 }
+
 // 
 // Grid
 //
 
 .max-wrap {
     max-width: $max-wrap;
+}
+
+.challenge-wrap {
+    
+    @include media($screen-xs){}
+    @include media($screen-sm){max-width: 1210px;}
+    @include media($screen-md){}
+    @include media($screen-lg){}
+    @include media($screen-xl){}
 
 }
 
