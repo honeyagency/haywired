@@ -252,7 +252,8 @@ function prepareResiliencyFields()
     $challenge = array(
         'title'   => get_field('field_5a83787339610'),
         'content' => get_field('field_5a83794a39611'),
-        'coming'  => get_field('field_5a83829d2eaaa'),
+        'text'    => get_field('field_5a83829d2eaaa'),
+        'link'    => get_field('field_5ad679481195d'),
     );
     $exampleImageId = get_field('field_5a8379d407e2d');
     $exampleImage   = null;
@@ -464,14 +465,13 @@ function prepareSubmissionIntro()
         'title'   => get_field('field_5ad666ce6942e'),
         'content' => get_field('field_5ad666d56942f'),
     );
-    $formId = get_field('field_5ad66a1dcdfce');
+    $formId     = get_field('field_5ad66a1dcdfce');
     $formObject = gravity_form($formId, false, false, false, null, true, null, false);
-    $form   = array(
+    $form       = array(
         'title' => get_field('field_5ad66a0ecdfcd'),
         'form'  => $formObject,
 
     );
-    
 
     $section = array(
         'intro' => $intro,

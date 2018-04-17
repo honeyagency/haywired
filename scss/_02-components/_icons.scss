@@ -128,4 +128,8 @@
     width: 60px;
     float: right;
     display: inline-block;
+
+    &.fifty {
+        width: 50px;
+    }
 }

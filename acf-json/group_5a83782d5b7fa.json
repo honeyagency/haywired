@@ -112,7 +112,7 @@
         },
         {
             "key": "field_5a83829d2eaaa",
-            "label": "Coming Soon Text",
+            "label": "Challenge Text",
             "name": "coming_soon_text",
             "type": "text",
             "instructions": "",
@@ -128,6 +128,21 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5ad679481195d",
+            "label": "Challenge Link",
+            "name": "challenge_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_5a83798907e28",
@@ -304,5 +319,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1518568691
+    "modified": 1524005199
 }

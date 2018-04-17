@@ -223,3 +223,14 @@ form {
         }
     }
 }
+
+.gfield {
+    .validation_message {
+        font-family: $base-sans-font;
+        font-size: 0.8em;
+        top: -1em;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.9px;
+    }
+}
