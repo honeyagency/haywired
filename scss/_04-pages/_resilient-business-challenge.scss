@@ -130,3 +130,7 @@
         }
     }
 }
+
+.block--link {
+    border-top: 1px solid map-get($gray, medium);
+}

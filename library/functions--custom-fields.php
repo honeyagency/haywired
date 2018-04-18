@@ -479,3 +479,36 @@ function prepareSubmissionIntro()
     );
     return $section;
 }
+function prepareCongratsPage()
+{
+    $intro = array(
+        'title'   => get_field('field_5ad6836faff65'),
+        'content' => get_field('field_5ad6836faff77'),
+    );
+    if (have_rows('field_5ad6839169321')) {
+        $linksection = array();
+        while (have_rows('field_5ad6839169321')) {
+            the_row();
+            if (have_rows('field_5ad683a869323')) {
+                $links = array();
+                while (have_rows('field_5ad683a869323')) {
+                    the_row();
+                    $links[] = array(
+                        'title' => get_sub_field('field_5ad6841a69326'),
+                        'link'  => get_sub_field('field_5ad6848b6932b'),
+                    );
+                }
+            }
+            $linksection[] = array(
+                'title' => get_sub_field('field_5ad683a069322'),
+                'links' => $links,
+            );
+        }
+    }
+
+    $section = array(
+        'intro' => $intro,
+        'links' => $linksection,
+    );
+    return $section;
+}

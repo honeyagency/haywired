@@ -1,5 +1,5 @@
 <section class="section--header spacing--vert-5 {% if post.thumbnail %}hasimg{% endif %}">
-	{% if post.post_type != 'news' %}{% if post.post_type != 'event' %}<h1 class="deco font--condense text--uppercase {% if settings.parenttitle == 'use' %}sub{% endif %}">{% if settings.parenttitle == 'use' %}<span data-title="{{post.title}}">{{ post.parent.title }}{% else %}{% if post.title %}<span>{{post.title}}{% else %}<span>{{title}}{% endif %}{% endif %}</span></h1>{% endif %}{% endif %}
+	{% if post.post_type != 'news' %}{% if post.post_type != 'event' %}<h1 class="{% if post.title|length > 20 %}toolongfordeco{% else %}deco{% endif %} font--condense text--uppercase {% if settings.parenttitle == 'use' %}sub{% endif %}">{% if settings.parenttitle == 'use' %}<span data-title="{{post.title}}">{{ post.parent.title }}{% else %}{% if post.title %}<span>{{post.title}}{% else %}<span>{{title}}{% endif %}{% endif %}</span></h1>{% endif %}{% endif %}
 	{% if post.thumbnail %}
 		<div class="block--header-image">
 			<img src="{{post.thumbnail|resize(400,220)}}" data-original="{{post.thumbnail|resize(1080,594)}}" alt="{{post.thumbnail.caption}}" data-original-set="{{post.thumbnail|resize(640, 352)}}  640w,{{post.thumbnail|resize(750, 412)}}  750w,{{post.thumbnail|resize(1080,594)}} 1080w" sizes="100vw">
