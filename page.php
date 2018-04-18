@@ -47,6 +47,8 @@ if (is_front_page()) {
     $context['reports'] = prepareReportsPageFields();
 } elseif (is_page(497)) {
     $context['challenge'] = challengePageOne();
+} elseif (is_page(626)) {
+    $context['challenge'] = challengePageOne();
 }
 if ($post->post_parent == '16') {
     $context['resiliency'] = prepareResiliencyFields();
