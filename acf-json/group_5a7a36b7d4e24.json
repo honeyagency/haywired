@@ -20,9 +20,9 @@
         },
         {
             "key": "field_5a7a39a3614fe",
-            "label": "Navigation Resources Link",
+            "label": "Navigation Resources Form",
             "name": "navigation_resources_link",
-            "type": "link",
+            "type": "forms",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,7 +31,28 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "id",
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_5ad795d1eb60f",
+            "label": "Navigation Resources Title",
+            "name": "navigation_resources_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5a7a36c438c9d",
@@ -366,5 +387,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1524020317
+    "modified": 1524078130
 }

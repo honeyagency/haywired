@@ -108,7 +108,8 @@ function prepareSiteOptions()
 {
 
     $header = array(
-        'resources' => get_field('field_5a7a39a3614fe', 'options'),
+        'form'  => get_field('field_5a7a39a3614fe', 'options'),
+        'title' => get_field('field_5ad795d1eb60f', 'options'),
     );
     $options = array(
         'signuptxt' => get_field('field_5a846e93f2910', 'options'),
