@@ -77,9 +77,9 @@
         },
         {
             "key": "field_5ad62c221c5e3",
-            "label": "Right Box Link",
+            "label": "Right Box Form",
             "name": "right_box_link",
-            "type": "link",
+            "type": "forms",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -88,7 +88,9 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "id",
+            "allow_null": 0,
+            "multiple": 0
         },
         {
             "key": "field_5ad627f855545",
@@ -189,9 +191,9 @@
                 },
                 {
                     "key": "field_5ad6285c5554a",
-                    "label": "Link",
+                    "label": "Form",
                     "name": "tier_link",
-                    "type": "link",
+                    "type": "forms",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -200,9 +202,82 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "id",
+                    "allow_null": 0,
+                    "multiple": 0
                 }
             ]
+        },
+        {
+            "key": "field_5ad697cc77683",
+            "label": "Form",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ad697a294a95",
+            "label": "Form",
+            "name": "embedded_form",
+            "type": "forms",
+            "instructions": "This is the form that will pop-up when a user clicks any of the tiers",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_5ad698b2c25a6",
+            "label": "Title",
+            "name": "form_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ad698bcc25a7",
+            "label": "Description",
+            "name": "form_description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
         }
     ],
     "location": [
@@ -222,5 +297,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523985453
+    "modified": 1524014899
 }

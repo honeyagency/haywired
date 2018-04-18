@@ -10,5 +10,22 @@
 			{% include 'components/sections/section--challenge-intro.twig' %}
 		</div>
 		{% include 'components/sections/section--challenge-links.twig' %}
+		<section class="section--resilient-start bg--gray-dark grid--four-fifths grid--sm-three-fifths margin--center spacing--vert-2 spacing--horiz-2 tier--1">
+			<span class="trigger--close">+</span>
+			<h2 class="color--green font--condense text--uppercase h1">{{challenge.form.title}}</h2>
+			<div class="font--serif color--gray-medium">{{challenge.form.content}}</div>
+			{{challenge.right.form}}
+			{{options.liability}}
+		</section>
+		{% for tier in challenge.tiers %}
+			<section class="section--resilient-start bg--gray-dark grid--four-fifths grid--sm-three-fifths margin--center spacing--vert-2 spacing--horiz-2 tier--{{loop.index + 1}}" id="{{tier.id}}">
+				<span class="trigger--close">+</span>
+				<h2 class="color--green font--condense text--uppercase h1">{{challenge.form.title}}</h2>
+				{{tier.title}}
+				<div class="font--serif color--gray-medium">{{challenge.form.content}}</div>
+				{{tier.form}}
+				{{options.liability}}
+			</section>
+		{% endfor %}
 	</article>
 {% endblock %}

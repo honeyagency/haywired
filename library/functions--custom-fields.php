@@ -114,6 +114,7 @@ function prepareSiteOptions()
         'signuptxt' => get_field('field_5a846e93f2910', 'options'),
         'header'    => $header,
         'search'    => get_search_form(false),
+        'liability' => get_field('field_5ad6b43f02c51', 'options'),
     );
     return $options;
 }
@@ -392,9 +393,11 @@ function challengePageOne()
         'content' => get_field('field_5ad627dfd5082'),
 
     );
-    $right = array(
+    $theRightForm       = get_field('field_5ad62c221c5e3');
+    $theRightFormObject = gravity_form($theRightForm, false, false, false, null, true, null, false);
+    $right              = array(
         'title' => get_field('field_5ad62c131c5e2'),
-        'link'  => get_field('field_5ad62c221c5e3'),
+        'form'  => $theRightFormObject,
     );
     $tierImageId = get_field('field_5ad6282255547');
     $tierImage   = null;
@@ -406,20 +409,27 @@ function challengePageOne()
         $tiers = array();
         while (have_rows('field_5ad6280555546')) {
             the_row();
-            $tiers[] = array(
+            $theTierForm       = get_sub_field('field_5ad6285c5554a');
+            $theTierFormObject = gravity_form($theTierForm, false, false, false, null, true, null, false);
+            $tiers[]           = array(
                 'title'   => get_sub_field('field_5ad6283c55548'),
                 'content' => get_sub_field('field_5ad6284655549'),
-                'link'    => get_sub_field('field_5ad6285c5554a'),
+                'form'    => $theTierFormObject,
             );
         }
     } else {
         $tiers = null;
     }
+    $form = array(
+        'title'   => get_field('field_5ad698b2c25a6'),
+        'content' => get_field('field_5ad698bcc25a7'),
+    );
     $challenge = array(
         'intro' => $intro,
         'right' => $right,
         'image' => $tierImage,
         'tiers' => $tiers,
+        'form'  => $form,
     );
     return $challenge;
 }

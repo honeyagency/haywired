@@ -5,6 +5,11 @@ jQuery(document).ready(function($) {
         throttle: 30,
         show_while_loading: false,
     });
+    $('.formbutton').on('click touchstart', function(event) {
+        event.preventDefault();
+        $('body').toggleClass('resilform');
+    });
+
 
     function scroll() {}
     $trig = $('.menu--trigger');
