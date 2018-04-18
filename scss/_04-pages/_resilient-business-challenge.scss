@@ -40,12 +40,26 @@
         }
 
         .challenge-check {
-            @extend .grid--one;
+            .ginput_container_checkbox {
+                ul {
+                    @extend .flex;
 
-            @extend .grid--sm-half;
+                    @extend .justify--between;
+
+                    @extend .align--items-baseline;
+
+                    @extend .flex--wrap;
+
+                    li {
+                        @extend .grid--one;
+
+                        @extend .grid--sm-half;
+                    }
+                }
+            }
         }
 
-        input {
+        input,textarea {
             width: 100% !important;
             margin-bottom: 1em;
             border: 1px solid #c1c1c1;
@@ -154,13 +168,7 @@
             @extend .flex--wrap;
         }
 
-        .challenge-check {
-            @extend .grid--one;
-
-            @extend .grid--sm-half;
-        }
-
-        input {
+        input,textarea {
             width: 100% !important;
             margin-bottom: 1em;
         }
@@ -272,18 +280,16 @@ body {
 }
 
 .trigger--close {
-
-        position: absolute;
-        right: 1em;
-        top: 1em;
-        background: white;
-        color: black;
-        width: 20px;
-        height: 20px;
-        text-align: center;
-        line-height: 20px;
-        cursor: pointer;
-        transform: rotate(45deg);
-        border-radius: 20px;
-
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    background: white;
+    color: black;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    border-radius: 20px;
 }
