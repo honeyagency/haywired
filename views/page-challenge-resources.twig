@@ -5,7 +5,10 @@
 			{% include 'components/sections/section--header.twig' %}
 		{% endblock %}
 		{% include 'components/sections/section--challenge-resources-intro.twig' %}
+		{% if challenge.resources %}
 		{% include 'components/sections/section--challenge-resources.twig' %}
+		
 			<a href="{{challenge.intro.link.url}}" class="margin--bot-4 button bg--green center spacing--vert-1 spacing--horiz-2 text--uppercase font--bold letter--1">{{challenge.intro.link.title}}</a>
+		{% endif %}
 	</article>
 {% endblock %}
