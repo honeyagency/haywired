@@ -1,11 +1,11 @@
 <section class="section--home-countdown bg--gray-dark color--white flex flex--wrap">
-	<div class="block--countdown-clock grid--one grid--sm-half grid--md-two-fifths grid--lg-third nog flex flex--wrap text--center" id="theclock" data-time-left="{{home.countdown.time|date('M d, Y H:i:s')}}">
+{# 	<div class="block--countdown-clock grid--one grid--sm-half grid--md-two-fifths grid--lg-third nog flex flex--wrap text--center" id="theclock" data-time-left="{{home.countdown.time|date('M d, Y H:i:s')}}">
 		<div class="grid--fourth grid--sm-half nog count"><div class="data"><div class="color--green font--condense font--thin num" id="days">{{home.countdown.interval.days}}</div><div class="type">Days</div></div></div>
 		<div class="grid--fourth grid--sm-half nog count"><div class="data"><div class="color--green font--condense font--thin num" id="hours">{{home.countdown.interval.h}}</div><div class="type">Hours</div></div></div>
 		<div class="grid--fourth grid--sm-half nog count"><div class="data"><div class="color--green font--condense font--thin num" id="minutes">{{home.countdown.interval.i}}</div><div class="type">Minutes</div></div></div>
 		<div class="grid--fourth grid--sm-half nog count"><div class="data"><div class="color--green font--condense font--thin num" id="seconds">{{home.countdown.interval.s}}</div><div class="type">Seconds</div></div></div>
-	</div>
-	<div class="block--countdown-content grid--one grid--sm-half grid--md-three-fifths grid--lg-two-thirds nog spacing--vert-3 spacing--dsk-vert-2 spacing--gutter">
+	</div> #}
+	<div class="block--countdown-content grid--one  nog spacing--vert-3 spacing--dsk-vert-6 spacing--gutter">
 		<div class="grid--sm-one grid--lg-three-fifths margin--center vertical--center">
 			<strong class="letter--1 text--uppercase">{{home.countdown.title}}</strong><br>
 			<h2 class="text--uppercase font--condense margin--bot-half color--green">{{home.countdown.time}}</h2>
@@ -15,23 +15,21 @@
 	</div>
 </section>
 <script type="text/javascript" charset="utf-8" async defer>
+// const second = 1000,
+//       minute = second * 60,
+//       hour = minute * 60,
+//       day = hour * 24;
+// clock = document.getElementById('theclock');
+// let countDown = new Date(clock.dataset.timeLeft).getTime(),
+//     x = setInterval(function() {
 
+//       let now = new Date().getTime(),
+//           distance = countDown - now;
 
-
-const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
-clock = document.getElementById('theclock');
-let countDown = new Date(clock.dataset.timeLeft).getTime(),
-    x = setInterval(function() {
-
-      let now = new Date().getTime(),
-          distance = countDown - now;
-
-      document.getElementById('days').innerHTML = Math.floor(distance / (day)),
-        document.getElementById('hours').innerHTML = Math.floor((distance % (day)) / (hour)),
-        document.getElementById('minutes').innerHTML = Math.floor((distance % (hour)) / (minute)),
-        document.getElementById('seconds').innerHTML = Math.floor((distance % (minute)) / second);
+//       document.getElementById('days').innerHTML = Math.floor(distance / (day)),
+//         document.getElementById('hours').innerHTML = Math.floor((distance % (day)) / (hour)),
+//         document.getElementById('minutes').innerHTML = Math.floor((distance % (hour)) / (minute)),
+//         document.getElementById('seconds').innerHTML = Math.floor((distance % (minute)) / second);
   
-    }, second)</script>
+//     }, second)
+    </script>
