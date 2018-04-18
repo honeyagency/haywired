@@ -106,10 +106,13 @@ function prepareSocial()
 
 function prepareSiteOptions()
 {
-
-    $header = array(
-        'form'  => get_field('field_5a7a39a3614fe', 'options'),
-        'title' => get_field('field_5ad795d1eb60f', 'options'),
+    $formId  = get_field('field_5a7a39a3614fe', 'options');
+    $theForm = gravity_form($formId, false, false, false, null, true, null, false);
+    $header  = array(
+        'form'    => $theForm,
+        'nav'     => get_field('field_5ad795d1eb60f', 'options'),
+        'title'   => get_field('field_5ad79b9a05e00', 'options'),
+        'content' => get_field('field_5ad79bb905e01', 'options'),
     );
     $options = array(
         'signuptxt' => get_field('field_5a846e93f2910', 'options'),
