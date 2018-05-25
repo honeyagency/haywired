@@ -4,15 +4,13 @@
 			<h2 class="deco font--condense"><span>{{resiliency.challenge.title}}</span></h2>
 			<div class="font--serif font--large">{{resiliency.challenge.content}}</div>
 		</div>
-
-		<div class="grid--one grid--sm-half grid--md-third bg--gray-dark spacing--vert-2 spacing--horiz-2">
-			<i class="icon-challenge fifty" data-grunticon-embed></i>
-
-		<h2 class="color--white text--upper font--condense margin--bot-1">{{resiliency.challenge.text}}</h2>
-		<a href="{{resiliency.challenge.link.url}}" class="button bg--green color--black  text--uppercase font--bold letter--1 spacing--horiz-1 text--center  spacing--vert-1 inline-block">{{resiliency.challenge.link.title}}</a>
-
-		</div>
-
+		{% if resiliency.challenge.link.title %}
+			<div class="grid--one grid--sm-half grid--md-third bg--gray-dark spacing--vert-2 spacing--horiz-2">
+				<i class="icon-challenge fifty" data-grunticon-embed></i>
+				<h2 class="color--white text--upper font--condense margin--bot-1">{{resiliency.challenge.text}}</h2>
+				<a href="{{resiliency.challenge.link.url}}" class="button bg--green color--black  text--uppercase font--bold letter--1 spacing--horiz-1 text--center  spacing--vert-1 inline-block">{{resiliency.challenge.link.title}}</a>
+			</div>
+		{% endif %}
 	</div>
 	<i class="icon-bg-map botleft" data-grunticon-embed></i>
 </section>
