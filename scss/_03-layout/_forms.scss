@@ -233,4 +233,28 @@ form {
         text-transform: uppercase;
         letter-spacing: 0.9px;
     }
+
+    select,
+    textarea,
+    #{$all-text-inputs} {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
+
+.ginput_complex {
+    label{
+        @extend .screenreader;
+    }
+    @extend .flex;
+
+    @extend .align--items-start;
+
+    @extend .justify--between;
+
+    @extend .flex--wrap;
+
+    span {
+        @extend .grid--half;
+    }
 }
