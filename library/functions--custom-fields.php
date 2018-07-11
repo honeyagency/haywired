@@ -508,14 +508,16 @@ function prepareCongratsPage()
                 while (have_rows('field_5ad683a869323')) {
                     the_row();
                     $previewImage = null;
-                    $previewId    = get_sub_field('field_5ad6841a69326');
+                    $previewId    = get_sub_field('field_5b466ed304e02');
+
                     if (!empty($previewId)) {
                         $previewImage = new TimberImage($previewId);
                     }
+
                     $links[] = array(
                         'title'   => get_sub_field('field_5ad6841a69326'),
                         'link'    => get_sub_field('field_5ad6848b6932b'),
-                        'preview' => $preview,
+                        'preview' => $previewImage,
                     );
                 }
             }

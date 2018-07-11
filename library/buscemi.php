@@ -63,6 +63,19 @@ function slider_scripts()
     wp_enqueue_style('flickity_style', get_template_directory_uri() . '/app/vendors/flickity/flickity.css', null, null, null);
 }
 
+function bigfoot_scripts()
+{
+    // wp_register_script('selectric', get_template_directory_uri() . '/app/vendors/selectric.js', null, false, true);
+    // wp_enqueue_script('selectric');
+
+    // wp_enqueue_style('slick_style', get_template_directory_uri() . '/app/vendors/slick/slick.min.css', null, null, null);
+
+    wp_register_script('bigfoot', get_template_directory_uri() . '/app/vendors/bigfoot/bigfoot.min.js', null, false, true);
+    wp_enqueue_script('bigfoot');
+
+    
+}
+
 // Enqueuing all of our scripts and styles
 function buscemi_scripts()
 {

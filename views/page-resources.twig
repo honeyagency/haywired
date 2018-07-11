@@ -4,19 +4,36 @@
 		
 		{% include 'components/sections/section--resources-intro.twig' %}
 		
-			{% for section in media.links %}
-				<section class="section--challenge-form-wrap bg--gray-light spacing--gutter-mob spacing--dsk-horiz-2 spacing--vert-3">
+		{% for section in media.links %}
+			<section class="section--challenge-form-wrap bg--gray-light spacing--gutter-mob spacing--dsk-horiz-2 spacing--vert-3">
 				<div>
 					<h2 class="h1 font--condense text--uppercase spacing--horiz-half margin--bot-1">{{section.title}}</h2>
 					{% for link in section.links %}
 						<div class="block--link flex flex--wrap justify--between spacing--vert-2 spacing--horiz-half ">
 							<strong class="text--uppercase letter--1 grid--half block">{{link.title}}</strong>
-							<div class="grid--half grid--md-fourth"><a href="{{link.link.url}}" class=" underline  button inline--block text--uppercase font--bold letter--1">{{link.link.title}}</a></div>
+							<div class="grid--half grid--sm-fourth flex flex--column align--items-start"><a href="{{link.link.url}}" class=" underline  button inline--block text--uppercase font--bold letter--1">{{link.link.title}}</a>
+							{% if link.preview %}
+								<div class="font--small font--bold letter--1 text--uppercase margin--top-1">
+									Preview
+									<sup id="fnref:{{loop.index}}">
+									<a href="#fn:{{loop.index}}" rel="footnote"></a>
+									</sup>
+								</div>
+								<div class="footnotes"><ol>
+									<li class="footnote" id="fn:{{loop.index}}">
+										<p><img src="{{link.preview|resize(150,150)}}"><p>
+										</li>
+									</ol></div>
+								{% endif %}
+							</div>
+							
 						</div>
 					{% endfor %}
 				</div>
 			</section><br><br>
-			{% endfor %}
+		{% endfor %}
 		
 	</article>
+	<span id="bigfoot"></span>
+	
 {% endblock %}

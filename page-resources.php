@@ -15,4 +15,7 @@ $context['post']     = $post;
 $context['settings'] = preparePageSettings();
 $context['media']    = prepareCongratsPage();
 
+add_action('wp_enqueue_scripts', 'bigfoot_scripts');
+        
+
 Timber::render(array('page-resources.twig'), $context);

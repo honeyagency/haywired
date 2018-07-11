@@ -10,7 +10,6 @@ jQuery(document).ready(function($) {
         $('body').toggleClass('resilform');
     });
 
-
     function scroll() {}
     $trig = $('.menu--trigger');
     $trig.on('click touchstart', function(event) {
@@ -65,6 +64,9 @@ jQuery(document).ready(function($) {
             prevNextButtons: true,
             pageDots: false
         });
+    }
+    if ($('#bigfoot').length > 0) {
+        $.bigfoot();
     }
     if (window.matchMedia('(max-width: 767px)').matches) {
         var mob = true;

@@ -26,7 +26,34 @@
     max-width: 925px;
     top: -4em;
     position: relative;
-    z-index: 999999999;
+
+    &:nth-of-type(1) {
+        z-index: 999999998;
+    }
+
+    &:nth-of-type(2) {
+        z-index: 999999997;
+    }
+
+    &:nth-of-type(3) {
+        z-index: 999999996;
+    }
+
+    &:nth-of-type(4) {
+        z-index: 999999995;
+    }
+
+    &:nth-of-type(5) {
+        z-index: 999999994;
+    }
+
+    &:nth-of-type(6) {
+        z-index: 999999993;
+    }
+
+    &:nth-of-type(7) {
+        z-index: 999999992;
+    }
 
     form {
         .gform_fields {
