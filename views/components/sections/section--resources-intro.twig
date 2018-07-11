@@ -1,0 +1,8 @@
+<section class="section--challenge-submission-intro relative bg--gray-dark">
+	{% if post.post_parent != 0 %}{% include 'components/blocks/block--breadcrumbs.twig' %}{% endif %}
+	<div class="text--center spacing--gutter spacing--vert-4 spacing--dsk-vert-6">
+		<i class="icon-challenge block margin--center" data-grunticon-embed></i>
+		<h1 class="font--condense text--uppercase color--green">{{media.intro.title}}</h1>
+		<div class="grid--one grid--sm-half  color--white margin--center font--large font--serif">{{media.intro.content}}</div>
+	</div>
+</section>

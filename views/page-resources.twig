@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		
+		{% include 'components/sections/section--resources-intro.twig' %}
+		
+			{% for section in media.links %}
+				<section class="section--challenge-form-wrap bg--gray-light spacing--gutter-mob spacing--dsk-horiz-2 spacing--vert-3">
+				<div>
+					<h2 class="h1 font--condense text--uppercase spacing--horiz-half margin--bot-1">{{section.title}}</h2>
+					{% for link in section.links %}
+						<div class="block--link flex flex--wrap justify--between spacing--vert-2 spacing--horiz-half ">
+							<strong class="text--uppercase letter--1 grid--half block">{{link.title}}</strong>
+							<div class="grid--half grid--md-fourth"><a href="{{link.link.url}}" class=" underline  button inline--block text--uppercase font--bold letter--1">{{link.link.title}}</a></div>
+						</div>
+					{% endfor %}
+				</div>
+			</section><br><br>
+			{% endfor %}
+		
+	</article>
+{% endblock %}

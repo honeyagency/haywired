@@ -1,6 +1,6 @@
 {
     "key": "group_5ad6836fa8ad4",
-    "title": "Challenge Congrats",
+    "title": "Media",
     "fields": [
         {
             "key": "field_5ad6836faff49",
@@ -164,6 +164,30 @@
                             "return_format": "array"
                         }
                     ]
+                },
+                {
+                    "key": "field_5b465a0b2ac32",
+                    "label": "Download Preview (Optional)",
+                    "name": "download_preview_optional",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
                 }
             ]
         }
@@ -174,6 +198,13 @@
                 "param": "post_template",
                 "operator": "==",
                 "value": "page-challenge-congratulations.php"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-resources.php"
             }
         ]
     ],
@@ -187,5 +218,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1524008099
+    "modified": 1531337242
 }
