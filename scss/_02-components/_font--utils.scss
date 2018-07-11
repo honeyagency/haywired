@@ -26,6 +26,12 @@
     font-size: 1.4em;
 }
 
+.font--larger-dsk {
+    @include media($screen-sm) {
+        font-size: 1.4em;
+    }
+}
+
 .font--huge {
     font-size: 3em;
     letter-spacing: 0;
