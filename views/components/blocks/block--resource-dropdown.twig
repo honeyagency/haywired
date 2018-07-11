@@ -2,10 +2,11 @@
 	<ul>
 		<li class="nav-item menu-item-has-children resources--nav text--center">
 			<div class="nav-link color--gray parent"><div class="title font--condense font--bold text--uppercase font--larger">{{options.header.nav}}</div></div>
+			<label class="hidden--dsk trigger--children"><span>+</span></label>
 			<ul class="section--child-nav nav nav-drop dsk--flex flex--column">
 				{% for item in options.header.navitems %}
 					<li class="nav-drop-item child">
-						<a class="nav-link color--gray-dark font--bold text--uppercase trigger--form media--tab  color--gray font--condense text--uppercase font--larger" data-target="media--form-{{loop.index}}" href="" title="{{item.title}}">{{item.title}}</a>
+						<a class="nav-link color--gray-dark font--bold text--uppercase trigger--form media--tab  color--gray font--condense text--uppercase" data-target="media--form-{{loop.index}}" href="" title="{{item.title}}">{{item.title}}</a>
 					</li>
 				{% endfor %}
 			</ul>

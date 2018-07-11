@@ -389,11 +389,18 @@ body {
     top: 1em;
     background: white;
     color: black;
-    width: 20px;
-    height: 20px;
     text-align: center;
-    line-height: 20px;
     cursor: pointer;
     transform: rotate(45deg);
-    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+
+    @include media($screen-sm) {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 20px;
+    }
 }

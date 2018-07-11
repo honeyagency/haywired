@@ -45,7 +45,7 @@
     }
 }
 
-nav {
+.main-nav {
     @include media($max-sm) {
         z-index: 999999;
         transition: transform 0.3s $base-animation;
@@ -190,12 +190,16 @@ nav {
         }
 
         transform: translateX(-100%);
+
+        .resources--nav {
+            text-align: left !important;
+        }
     }
 }
 
 body.navopen {
     @include media($max-sm) {
-        nav {
+        .main-nav {
             transform: translateX(0);
             transition: transform 0.3s $base-animation;
         }
@@ -227,9 +231,8 @@ body.navopen {
         }
     }
 
-    nav {
+    .main-nav {
         transition: transform 0.4s $base-animation;
         transform: translateY(0);
-
     }
 }

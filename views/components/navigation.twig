@@ -1,4 +1,4 @@
-<nav role="navigation" class="grid--sm-three-fifths grid--lg-two-fifths">
+<nav role="navigation" class="grid--sm-three-fifths grid--lg-two-fifths main-nav">
 	<ul class="dsk--flex flex--wrap justify--between text--center grid--one">
 		{# {{menu.get_items|print_r}} #}
 		{% for item in menu.get_items %}
@@ -20,4 +20,15 @@
 			<div class="nav-border {% if loop.last %}hidden--lg{% endif %}"></div>
 		{% endfor %}
 	</ul>
+	<section class="section--social hidden--dsk">
+{% if extras == 'false' %}{% else %}
+{% if options.header.nav %}
+	{% include 'components/blocks/block--resource-dropdown.twig' %}
+{% endif %}
+{% endif %}
+{% if social.facebook.url %}<a href="{{social.facebook.url}}" target="{{social.facebook.target}}" title="Follow {{social.facebook.title}} on Facebook"><i class="icon-social--facebook" data-grunticon-embed></i></a>{% endif %}
+{% if social.twitter.url %}<a href="{{social.twitter.url}}" target="{{social.twitter.target}}" title="Follow {{social.twitter.title}} on Twitter"><i class="icon-social--twitter" data-grunticon-embed></i></a>{% endif %}
+{% if social.instagram.url %}<a href="{{social.instagram.url}}" target="{{social.instagram.target}}" title="Follow {{social.instagram.title}} on Instagram"><i class="icon-social--instagram" data-grunticon-embed></i></a>{% endif %}
+{% if extras == 'false' %}{% else %}<a href="" class="trigger--search"><i class="icon-social--search" data-grunticon-embed></i></a>{% endif %}
+</section>
 </nav><!-- #nav -->
