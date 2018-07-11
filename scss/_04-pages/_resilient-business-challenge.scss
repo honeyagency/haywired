@@ -176,6 +176,13 @@
     border-top: 1px solid map-get($gray, medium);
 }
 
+.section--media-form {
+    h3, p {
+        color: white;
+        margin-bottom: 1em;
+    }
+}
+
 .section--resilient-start, .section--media-form {
     transition: transform 0.3s $base-animation, top 0.3s $base-animation;
     top: 0;
