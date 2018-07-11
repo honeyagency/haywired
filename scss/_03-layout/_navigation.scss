@@ -130,9 +130,9 @@ nav {
 }
 
 header {
-    .resources {
-        margin-right: 1em;
-    }
+.resources--nav{
+    min-width: 230px;
+}
 }
 
 .wf-loading {

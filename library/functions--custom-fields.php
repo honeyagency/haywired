@@ -106,13 +106,26 @@ function prepareSocial()
 
 function prepareSiteOptions()
 {
-    $formId  = get_field('field_5a7a39a3614fe', 'options');
-    $theForm = gravity_form($formId, false, false, false, null, true, null, false);
-    $header  = array(
-        'form'    => $theForm,
-        'nav'     => get_field('field_5ad795d1eb60f', 'options'),
-        'title'   => get_field('field_5ad79b9a05e00', 'options'),
-        'content' => get_field('field_5ad79bb905e01', 'options'),
+
+    if (have_rows('field_5b467f609cc30', 'options')) {
+        $navitems = array();
+        while (have_rows('field_5b467f609cc30', 'options')) {
+            the_row();
+            $mediaFormObject = null;
+            $mediaForm       = get_sub_field('field_5b46806f9cc32', 'options');
+            if (!empty($mediaForm)) {
+                $mediaFormObject = gravity_form($mediaForm, true, true, false, null, true, null, false);
+            }
+
+            $navitems[] = array(
+                'title' => get_sub_field('field_5b46804d9cc31', 'options'),
+                'form'  => $mediaFormObject,
+            );
+        }
+    }
+    $header = array(
+        'nav'      => get_field('field_5ad795d1eb60f', 'options'),
+        'navitems' => $navitems,
     );
     $options = array(
         'signuptxt' => get_field('field_5a846e93f2910', 'options'),

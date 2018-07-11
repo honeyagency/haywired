@@ -19,9 +19,9 @@
 {% endblock %}
 {% include 'components/sections/section--site-search-modal.twig' %}
 {% include 'components/analytics.twig' %}
-{% if options.header.form %}
+{% for item in options.header.navitems %}
 {% include 'components/sections/section--media-form.twig' %}
-{% endif %}
+{% endfor %}
 
 </body>
 </html>

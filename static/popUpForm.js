@@ -13,7 +13,10 @@ jQuery(document).ready(function($) {
             $('body').removeClass('tier--2');
             $('body').removeClass('tier--3');
             $('body').removeClass('tier--4');
-            $('body').removeClass('media--form');
+            $('body').removeClass('media--form-1');
+            $('body').removeClass('media--form-2');
+            $('body').removeClass('media--form-3');
+            $('body').removeClass('media--form-4');
             $('body').addClass($showForm);
             var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
             html.data('scroll-position', scrollPosition);
@@ -31,7 +34,10 @@ jQuery(document).ready(function($) {
             $('body').removeClass('tier--2');
             $('body').removeClass('tier--3');
             $('body').removeClass('tier--4');
-            $('body').removeClass('media--form');
+            $('body').removeClass('media--form-1');
+            $('body').removeClass('media--form-2');
+            $('body').removeClass('media--form-3');
+            $('body').removeClass('media--form-4');
             var html = jQuery('html');
             var scrollPosition = html.data('scroll-position');
             html.css('overflow', html.data('previous-overflow'));

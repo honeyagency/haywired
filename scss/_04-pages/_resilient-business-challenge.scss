@@ -305,8 +305,64 @@ body {
         }
     }
 
-    &.media--form {
-        .section--media-form {
+    &.media--form-1 {
+        .section--media-form-1 {
+            transition: transform 0.3s $base-animation, top 0.3s $base-animation;
+            transform: translateY(-50%) translateX(-50%);
+            top: 50%;
+        }
+
+        &:before {
+            transition: opacity 0.3s $base-animation;
+            opacity: 1;
+            z-index: 9999999;
+        }
+    }
+
+    &.media--form-2 {
+        .section--media-form-2 {
+            transition: transform 0.3s $base-animation, top 0.3s $base-animation;
+            transform: translateY(-50%) translateX(-50%);
+            top: 50%;
+        }
+
+        &:before {
+            transition: opacity 0.3s $base-animation;
+            opacity: 1;
+            z-index: 9999999;
+        }
+    }
+
+    &.media--form-3 {
+        .section--media-form-3 {
+            transition: transform 0.3s $base-animation, top 0.3s $base-animation;
+            transform: translateY(-50%) translateX(-50%);
+            top: 50%;
+        }
+
+        &:before {
+            transition: opacity 0.3s $base-animation;
+            opacity: 1;
+            z-index: 9999999;
+        }
+    }
+
+    &.media--form-4 {
+        .section--media-form-4 {
+            transition: transform 0.3s $base-animation, top 0.3s $base-animation;
+            transform: translateY(-50%) translateX(-50%);
+            top: 50%;
+        }
+
+        &:before {
+            transition: opacity 0.3s $base-animation;
+            opacity: 1;
+            z-index: 9999999;
+        }
+    }
+
+    &.media--form-5 {
+        .section--media-form-5 {
             transition: transform 0.3s $base-animation, top 0.3s $base-animation;
             transform: translateY(-50%) translateX(-50%);
             top: 50%;
