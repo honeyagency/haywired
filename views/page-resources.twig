@@ -11,7 +11,7 @@
 					{% for link in section.links %}
 						<div class="block--link flex flex--wrap justify--between spacing--vert-2 spacing--horiz-half ">
 							<strong class="text--uppercase letter--1 grid--half block">{{link.title}}</strong>
-							<div class="grid--half grid--sm-fourth flex flex--column align--items-start"><a href="{{link.link.url}}" class=" underline  button inline--block text--uppercase font--bold letter--1">{{link.link.title}}</a>
+							<div class="grid--half grid--sm-fourth flex flex--column align--items-start"><a href="{{link.link.url}}" class=" underline  button inline--block text--uppercase font--bold letter--1" target="{{link.link.target}}">{{link.link.title}}</a>
 							{% if link.preview %}
 								<div class="font--small font--bold letter--1 text--uppercase margin--top-1">
 									Preview
