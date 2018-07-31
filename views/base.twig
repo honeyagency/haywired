@@ -8,10 +8,13 @@
 {% block header %}
 	{% include 'components/sections/header.twig' %}
 {% endblock %}
-<main role="main" class="content-wrapper">
+<main role="main" class="content-wrapper" id="barba-wrapper">
+	<div class="barba-container">
+
 	{% block content %}
 		Sorry, no content
 	{% endblock %}
+</div>
 </main>
 {% block footer %}
 	{% include 'footer.twig' %}

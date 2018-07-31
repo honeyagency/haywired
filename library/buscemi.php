@@ -89,6 +89,7 @@ function buscemi_scripts()
     wp_enqueue_script('lazyload');
     wp_register_script('appear', get_template_directory_uri() . '/app/vendors/appear.min.js', null, false, true);
     // wp_enqueue_script('appear');
+
     wp_register_script('picturefill', get_template_directory_uri() . '/app/vendors/picturefill.min.js', null, false, true);
     wp_enqueue_script('picturefill');
 
