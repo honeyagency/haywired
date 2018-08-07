@@ -249,13 +249,17 @@ hr {
 .column--2 {
     @include media($screen-xs) {}
 
+
     @include media($screen-sm) {
         column-count: 2;
     }
 
+
     @include media($screen-md) {}
 
+
     @include media($screen-lg) {}
+
 
     @include media($screen-xl) {}
 
@@ -267,5 +271,11 @@ hr {
 
     .all {
         column-span: all;
+    }
+}
+
+.content-wrapper {
+    a {
+        border-bottom: 1px solid;
     }
 }
