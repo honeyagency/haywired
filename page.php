@@ -29,7 +29,7 @@ $context['settings'] = preparePageSettings();
 if (is_front_page()) {
     $home               = prepareHomepageFields();
     $context['home']    = $home;
-    $context['twitter'] = getTwitter();
+    // $context['twitter'] = getTwitter();
     $context['news']    = getCustomPosts('news', 1, null, 'date', null, null);
     $size               = sizeof($home['partners']['partners']);
     if ($size > 5) {

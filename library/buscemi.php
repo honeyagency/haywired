@@ -118,42 +118,42 @@ if (function_exists('acf_add_options_page')) {
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';
 
-require_once 'tweet-php/TweetPHP.php';
-function getTwitter()
-{
-    $consumer_key        = get_field('field_5a821ed09dbe1', 'options');
-    $consumer_secret     = get_field('field_5a821ed79dbe2', 'options');
-    $access_token        = get_field('field_5a821edd9dbe3', 'options');
-    $access_token_secret = get_field('field_5a821ee39dbe4', 'options');
-    $twitter_screen_name = get_field('field_5a821eeb9dbe5', 'options');
-    $TweetPHP            = new TweetPHP(array(
-        'consumer_key'        => $consumer_key,
-        'consumer_secret'     => $consumer_secret,
-        'access_token'        => $access_token,
-        'access_token_secret' => $access_token_secret,
-        'api_params'          => array('screen_name' => 'thehoneyagency'),
+// require_once 'tweet-php/TweetPHP.php';
+// function getTwitter()
+// {
+//     $consumer_key        = get_field('field_5a821ed09dbe1', 'options');
+//     $consumer_secret     = get_field('field_5a821ed79dbe2', 'options');
+//     $access_token        = get_field('field_5a821edd9dbe3', 'options');
+//     $access_token_secret = get_field('field_5a821ee39dbe4', 'options');
+//     $twitter_screen_name = get_field('field_5a821eeb9dbe5', 'options');
+//     $TweetPHP            = new TweetPHP(array(
+//         'consumer_key'        => $consumer_key,
+//         'consumer_secret'     => $consumer_secret,
+//         'access_token'        => $access_token,
+//         'access_token_secret' => $access_token_secret,
+//         'api_params'          => array('screen_name' => 'thehoneyagency'),
 
-    ));
+//     ));
 
-    $results             = $TweetPHP->get_tweet_array();
-    $formattedTweetArray = array();
-    // print_r($results);
-    // foreach ($results as $result) {
-    //     $formattedTweetArray[] = $TweetPHP->autolink($result);
+//     $results             = $TweetPHP->get_tweet_array();
+//     $formattedTweetArray = array();
+//     // print_r($results);
+//     // foreach ($results as $result) {
+//     //     $formattedTweetArray[] = $TweetPHP->autolink($result);
 
-    // }
-    // print_r($results);
-    foreach ($results as $formattedTweets) {
-        $compressedTweetArray[] = array(
-            'date'      => strtotime($formattedTweets['created_at']),
-            'user'      => $formattedTweets['user']['screen_name'],
-            'post_type' => 'twitter',
-            'id'        => $formattedTweets['id_str'],
-            'text'      => $TweetPHP->autolink($formattedTweets['text']),
+//     // }
+//     // print_r($results);
+//     foreach ($results as $formattedTweets) {
+//         $compressedTweetArray[] = array(
+//             'date'      => strtotime($formattedTweets['created_at']),
+//             'user'      => $formattedTweets['user']['screen_name'],
+//             'post_type' => 'twitter',
+//             'id'        => $formattedTweets['id_str'],
+//             'text'      => $TweetPHP->autolink($formattedTweets['text']),
 
-        );
+//         );
 
-    }
-    return $compressedTweetArray;
+//     }
+//     return $compressedTweetArray;
 
-}
+// }
