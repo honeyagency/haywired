@@ -22,7 +22,11 @@
 						{% if event.end_date %}
 							{% if event.start_time %}
 								{% if event.end_time %}
+									{% if event.end_date == event.start_date %}
+									{{event.start_date|date('M d')}} {{event.start_time}} - {{event.end_time}}
+								{% else %}
 									{{event.start_date|date('M d')}} {{event.start_time}} - {{event.end_date|date('M d, Y')}} {{event.end_time}}
+								{% endif %}
 									
 								{% endif %}
 							{% else %}
