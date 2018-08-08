@@ -275,7 +275,9 @@ hr {
 }
 
 .content-wrapper {
-    a {
-        border-bottom: 1px solid;
+    .max-wrap {
+        a {
+            border-bottom: 1px solid;
+        }
     }
 }
