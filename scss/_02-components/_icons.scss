@@ -7,9 +7,11 @@
     }
 
 
-    .icon-logo {
+    .icon-logo, .icon-logo-tagline {
         width: 160px;
         height: 40px;
+        // z-index: 9999999;
+        // position: relative;
 
         @include media($screen-sm) {
             width: 200px;
@@ -21,6 +23,12 @@
 
         svg {
             width: 100%;
+
+            g {
+                &:last-of-type {
+                    fill: map-get($gray, main);
+                }
+            }
         }
     }
 }

@@ -48,7 +48,7 @@
 
         // min-height: 100px;
 
-        .icon-round-logo {
+        .icon-round-logo,.icon-outsmart {
             display: inline-block;
             width: 200px;
             height: 141px;
@@ -68,7 +68,7 @@
 
             @include media($screen-md) {
                 width: 450px;
-                height: 316px;
+                height: 225px;
             }
 
 
