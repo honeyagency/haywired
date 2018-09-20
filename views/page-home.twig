@@ -2,9 +2,10 @@
 {% block content %}
 	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 		{% include 'components/sections/section--home-header.twig' %}
+		{% include 'components/sections/section--home-prepare.twig' %}
 		{% include 'components/sections/section--home-what.twig' %}
 		{% include 'components/sections/section--home-countdown.twig' %}
-		{% include 'components/sections/section--home-prepare.twig' %}
+		 
 		{% include 'components/sections/section--home-partners.twig' %}
 	</article>
 {% endblock %}
