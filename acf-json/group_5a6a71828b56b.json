@@ -143,163 +143,8 @@
             "new_lines": ""
         },
         {
-            "key": "field_5a6a7247e9ce5",
-            "label": "What",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5a6a724de9ce6",
-            "label": "Title",
-            "name": "home_what_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5a6a725fe9ce7",
-            "label": "Content",
-            "name": "home_what_content",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_5a6a726ce9ce8",
-            "label": "Link",
-            "name": "home_what_cta",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_5a6a7295e9cea",
-            "label": "Countdown",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5a6a729ce9ceb",
-            "label": "Countdown Time",
-            "name": "countdown_time",
-            "type": "date_time_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "d\/m\/Y g:i a",
-            "return_format": "M d, Y H:i:s",
-            "first_day": 1
-        },
-        {
-            "key": "field_5a6a72b1e9cec",
-            "label": "Title",
-            "name": "countdown_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5a6a72cae9ced",
-            "label": "Content",
-            "name": "countdown_content",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_5a6a72e4e9cee",
-            "label": "Link",
-            "name": "countdown_cta",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
             "key": "field_5a6a7310e9cef",
-            "label": "Prepare",
+            "label": "Outsmart Disaster",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -312,30 +157,6 @@
             },
             "placement": "top",
             "endpoint": 0
-        },
-        {
-            "key": "field_5a7e0e6ab1ab5",
-            "label": "Background Image",
-            "name": "prepare_background_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
         },
         {
             "key": "field_5a6a731ee9cf0",
@@ -450,8 +271,8 @@
             "return_format": "array"
         },
         {
-            "key": "field_5a82167bfb497",
-            "label": "Partners",
+            "key": "field_5ba40d8f4c931",
+            "label": "Resilient Business Challenge",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -466,9 +287,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a821687fb498",
-            "label": "Meet a Resilient Business Title",
-            "name": "meet_a_resilient_business",
+            "key": "field_5ba40da7f4e87",
+            "label": "Title",
+            "name": "resilient_business_challenge_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -485,47 +306,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a821697fb499",
-            "label": "Business Name",
-            "name": "business_name",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5a8216a3fb49a",
-            "label": "Partner Since Text",
-            "name": "partner_since_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5a8216b3fb49b",
-            "label": "Partner Description",
-            "name": "partner_description",
+            "key": "field_5ba40da6f4e86",
+            "label": "Content",
+            "name": "resilient_business_challenge_content",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -535,16 +318,16 @@
                 "class": "",
                 "id": ""
             },
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
             "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
             "delay": 0
         },
         {
-            "key": "field_5a8217e7fb49c",
-            "label": "Learn More (Parnter)",
-            "name": "learn_more_parnter",
+            "key": "field_5ba40da6f4e85",
+            "label": "Link",
+            "name": "resilient_business_challenge_link",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -557,9 +340,87 @@
             "return_format": "array"
         },
         {
-            "key": "field_5a8462ceb0663",
-            "label": "News Link",
-            "name": "news_link",
+            "key": "field_5a6a7247e9ce5",
+            "label": "Haywired Scenario",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ba3ed9f8420e",
+            "label": "Haywired Image",
+            "name": "haywired_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a6a724de9ce6",
+            "label": "Title",
+            "name": "home_what_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a6a725fe9ce7",
+            "label": "Content",
+            "name": "home_what_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5a6a726ce9ce8",
+            "label": "Link",
+            "name": "home_what_cta",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -570,6 +431,37 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_5ba3ecaab8e83",
+            "label": "Secondary Link",
+            "name": "prepare_scenario_link_copy",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5ba40a62b95f6",
+            "label": "Partners",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_5a8217f9fb49d",
@@ -616,5 +508,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1518820156
+    "modified": 1537478125
 }

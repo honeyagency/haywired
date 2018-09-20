@@ -23,24 +23,25 @@ function prepareHomepageFields()
         'mobile'  => $mobileImage,
         'content' => get_field('field_5a6a7ba788d96'),
     );
+
+    $haywiredBg   = null;
+    $haywiredBgId = get_field('field_5ba3ed9f8420e');
+
+    if (!empty($haywiredBgId)) {
+        $haywiredBg = new TimberImage($haywiredBgId);
+    }
     $what = array(
-        'title'   => get_field('field_5a6a724de9ce6'),
-        'content' => get_field('field_5a6a725fe9ce7'),
-        'cta'     => get_field('field_5a6a726ce9ce8'),
+        'background' => $haywiredBg,
+        'title'      => get_field('field_5a6a724de9ce6'),
+        'content'    => get_field('field_5a6a725fe9ce7'),
+        'cta'        => get_field('field_5a6a726ce9ce8'),
+        'ctatwo'     => get_field('field_5ba3ecaab8e83'),
     );
 
-    $countdownTime = get_field('field_5a6a729ce9ceb');
-    // $countdownTimestamp = strotime($countdownTime);
-    $formattedCountdown = DateTime::createFromFormat('M d, Y H:i:s', $countdownTime);
-
-    $interval = date_create('now')->diff($formattedCountdown);
-
-    $countdown = array(
-        'time'     => $countdownTime,
-        'interval' => $interval,
-        'title'    => get_field('field_5a6a72b1e9cec'),
-        'content'  => get_field('field_5a6a72cae9ced'),
-        'cta'      => get_field('field_5a6a72e4e9cee'),
+    $challenge = array(
+        'title'   => get_field('field_5ba40da7f4e87'),
+        'content' => get_field('field_5ba40da6f4e86'),
+        'link'    => get_field('field_5ba40da6f4e85'),
     );
 
     if (have_rows('field_5a6a733ce9cf2')) {
@@ -53,13 +54,9 @@ function prepareHomepageFields()
             );
         }
     }
-    $prepareImageId = get_field('field_5a7e0e6ab1ab5');
-    $prepareImage   = null;
-    if (!empty($prepareImageId)) {
-        $prepareImage = new TimberImage($prepareImageId);
-    }
-    $prepare = array(
-        'image'     => $prepareImage,
+
+    $outsmart = array(
+        'image'     => $outsmartImage,
         'title'     => get_field('field_5a6a731ee9cf0'),
         'content'   => get_field('field_5a6a7327e9cf1'),
         'scenarios' => $scenarios,
@@ -75,19 +72,13 @@ function prepareHomepageFields()
         $gallery = null;
     }
     $partners = array(
-        'title'    => get_field('field_5a821687fb498'),
-        'name'     => get_field('field_5a821697fb499'),
-        'since'    => get_field('field_5a8216a3fb49a'),
-        'content'  => get_field('field_5a8216b3fb49b'),
-        'cta'      => get_field('field_5a8217e7fb49c'),
-        'newscta'  => get_field('field_5a8462ceb0663'),
         'partners' => $gallery,
     );
     $home = array(
         'video'     => $video,
+        'challenge' => $challenge,
         'what'      => $what,
-        'countdown' => $countdown,
-        'prepare'   => $prepare,
+        'outsmart'  => $outsmart,
         'partners'  => $partners,
     );
     return $home;

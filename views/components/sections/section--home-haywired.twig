@@ -1,0 +1,9 @@
+<section class="text--center section--home-what  spacing--vert-3 bg" {% if home.what.background %}style="background-image:url('{{home.what.background|resize(1280)}}');"{% endif %}>
+	{# <i class="icon-bg-map" data-grunticon-embed></i> #}
+	<div class="block--what-wrap max-wrap margin--center spacing--gutter spacing--dsk-vert-6 color--white">
+		<h2 class="text--uppercase color--black  margin--bot-half deco center"><span>{{home.what.title}}</span></h2>
+		<div class="grid--sm-three-fifths margin--center margin--vert-3 font--large font--serif"><p>{{home.what.content|striptags}}</p></div>
+		<a class="button underline color--white" href="{{home.what.cta.url}}" target="{{home.what.cta.target}}" title="{{home.what.cta.title}}">{{home.what.cta.title}}</a>
+		<a class="button underline color--white" href="{{home.what.ctatwo.url}}" target="{{home.what.ctatwo.target}}" title="{{home.what.ctatwo.title}}">{{home.what.ctatwo.title}}</a>
+	</div>
+</section>

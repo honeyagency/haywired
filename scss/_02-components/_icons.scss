@@ -10,6 +10,7 @@
     .icon-logo, .icon-logo-tagline {
         width: 160px;
         height: 40px;
+
         // z-index: 9999999;
         // position: relative;
 
@@ -140,4 +141,13 @@
     &.fifty {
         width: 50px;
     }
+}
+
+.icon-rbc {
+    z-index: 9999;
+    position: relative;
+    max-width: 250px;
+    display: table;
+    margin: 0 auto;
+    width: 100%;
 }

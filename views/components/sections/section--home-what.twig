@@ -1,8 +1,0 @@
-<section class="section--home-what  spacing--vert-3 bg" {% if home.prepare.image %}style="background-image:url('{{home.prepare.image|resize(1280)}}');"{% endif %}>
-	{# <i class="icon-bg-map" data-grunticon-embed></i> #}
-	<div class="block--what-wrap max-wrap margin--center spacing--gutter spacing--dsk-vert-6 color--white">
-		<h2 class="text--uppercase color--black font--condense margin--bot-half deco"><span>{{home.what.title}}</span></h2>
-		<div class="grid--sm-three-fifths font--large font--serif"><p>{{home.what.content|striptags}}</p></div>
-		<a class="button underline color--white" href="{{home.what.cta.url}}" target="{{home.what.cta.target}}" title="{{home.what.cta.title}}">{{home.what.cta.title}}</a>
-	</div>
-</section>
