@@ -2,9 +2,9 @@
 	<hr class="color--gray-medium mar--no">
 	<span class="font--condense text--uppercase color--gray-medium font--bold font--large letter--1">Sponsors</span>
 	<br>
-	<div class="{% if home.partners.partners|length > 5 %} partner-slider spacing--gutter{% else %}flex flex--wrap justify--between{% endif %}">
+	<div class="flex flex--wrap justify--between">
 		{% for partner in home.partners.partners %}
-			<div class="partner" style="background-image:url('{{partner|resize(380)}}')">
+			<div class="partner grid--half grid--sm-third grid--md-fifth" style="background-image:url('{{partner|resize(380)}}')">
 			</div>
 		{% endfor %}
 	</div>

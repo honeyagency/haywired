@@ -281,3 +281,30 @@ hr {
         }
     }
 }
+
+.page-template-default {
+    main {
+        .content {
+            h5 {
+                // letter-spacing: 2px;
+                color: map-get($gray, border);
+                font-size: 2rem;
+                margin-bottom: 0.3em;
+                margin-top: 1em;
+                letter-spacing: 1.5px;
+                font-family: $second-sans-font;
+            }
+
+            h3 {
+                margin-top: 1.3em;
+            }
+
+            hr {
+                border-bottom: 4px solid;
+                width: 50px;
+                text-align: left;
+                margin: 0.5em 0;
+            }
+        }
+    }
+}
