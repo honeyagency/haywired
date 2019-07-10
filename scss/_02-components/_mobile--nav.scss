@@ -236,3 +236,9 @@ body.navopen {
         transform: translateY(0);
     }
 }
+
+.section--social {
+    .section--child-nav {
+        margin-top: 9px;
+    }
+}

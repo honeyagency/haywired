@@ -13,8 +13,8 @@
 			{# <div class="takeaway--title ">Key Takeaways</div> #}
 			{% for takeaway in volume.takeaways %}
 				<div class="block--takeaway dsk--flex flex--wrap justify--between align--items-center spacing--vert-1 spacing--dsk-vert-0">
-					<div class="icon grid--one grid--sm-third"><i class="icon-{{takeaway.icon}}" data-grunticon-embed></i></div>
-					<div class="content grid--one grid--sm-three-fifths">{{takeaway.content}}</div>
+					{% if  takeaway.icon %}<div class="icon grid--one grid--sm-third"><i class="icon-{{takeaway.icon}}" data-grunticon-embed></i></div>{% endif %}
+					<div class="content grid--one {% if takeaway.icon %}grid--sm-three-fifths{% endif %}">{{takeaway.content}}</div>
 				</div>
 				{% if loop.last %}{% else %}<hr>{% endif %}
 			{% endfor %}
