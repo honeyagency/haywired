@@ -271,6 +271,77 @@
             "return_format": "array"
         },
         {
+            "key": "field_5d2921cdac5bf",
+            "label": "Email Signup",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d2921d4ac5c0",
+            "label": "Email Signup Title",
+            "name": "email_signup_intro",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d29247c403af",
+            "label": "Email Intro",
+            "name": "email_signup_intro_content",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d2921e0ac5c1",
+            "label": "Email Signup Form",
+            "name": "email_signup_form",
+            "type": "forms",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
             "key": "field_5ba40d8f4c931",
             "label": "Resilient Business Challenge",
             "name": "",
@@ -508,5 +579,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1537478125
+    "modified": 1562977428
 }

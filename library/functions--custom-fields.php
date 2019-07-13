@@ -37,7 +37,16 @@ function prepareHomepageFields()
         'cta'        => get_field('field_5a6a726ce9ce8'),
         'ctatwo'     => get_field('field_5ba3ecaab8e83'),
     );
-
+    $newsletterFormObject = null;
+    $newsletterForm       = get_field('field_5d2921e0ac5c1');
+    if (!empty($newsletterForm)) {
+        $newsletterFormObject = gravity_form($newsletterForm, false, false, false, null, true, null, false);
+    }
+    $email = array(
+        'title' => get_field('field_5d2921d4ac5c0'),
+        'intro' => get_field('field_5d29247c403af'),
+        'form'  => $newsletterFormObject,
+    );
     $challenge = array(
         'title'   => get_field('field_5ba40da7f4e87'),
         'content' => get_field('field_5ba40da6f4e86'),
@@ -76,6 +85,7 @@ function prepareHomepageFields()
     );
     $home = array(
         'video'     => $video,
+        'email'     => $email,
         'challenge' => $challenge,
         'what'      => $what,
         'outsmart'  => $outsmart,
