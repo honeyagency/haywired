@@ -243,9 +243,10 @@ form {
 }
 
 .ginput_complex {
-    label{
+    label {
         @extend .screenreader;
     }
+
     @extend .flex;
 
     @extend .align--items-start;
@@ -258,6 +259,13 @@ form {
         @extend .grid--half;
     }
 }
+
 .gform_validation_container {
     display: none;
+}
+
+.screenlabel {
+    label {
+        @extend .screenreader;
+    }
 }
